@@ -1,0 +1,128 @@
+.header {
+    background-color: #000;
+    color: #fff;
+    height: 90px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    @include _768 {
+        background-color: transparent;
+        height: auto;
+        padding: 30px 0 0;
+        position: absolute;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include _768 {
+            justify-content: flex-end;
+        }
+    }
+
+    &__nav {
+        @include _768 {
+            display: none;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+
+            li {
+                margin-right: 26px;
+                line-height: 90px;
+            }
+        }
+
+        a {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color .15s ease;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    &__phone {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        transition: color .15s ease;
+        @include _768 {
+            display: none;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    .logo {
+        @include _768 {
+            display: none;
+        }
+    }
+
+    .menu-mobile {
+        @include no-btn();
+        display: none;
+        padding: 10px;
+        margin-right: -10px;
+
+        @include _768 {
+            display: block;
+            z-index: 99;
+        }
+
+        &.invert {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    .btn-wiki {
+        @include _768 {
+            display: none;
+        }
+    }
+}
+
+.btn-wiki {
+    background-color: #ea4033;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 60px;
+    width: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color .15s ease;
+
+    &:hover {
+        background-color: $color-primary-hover;
+    }
+
+    span {
+        color: #ea4033;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 1;
+        text-shadow: -1px 0 #fff,0 1px #fff,1px 0 #fff,0 -1px #fff;
+        text-transform: uppercase;
+    }
+
+    img {
+        margin-left: 5px;
+    }
+}

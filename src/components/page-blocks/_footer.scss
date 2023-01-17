@@ -1,0 +1,102 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 42px 0 56px;
+    
+    a {
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        @include _768 {
+            flex-direction: column;
+        }
+    }
+
+    &__copy {
+        @include _768 {
+            margin-bottom: 16px;
+        }
+
+        span {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+
+    &__contacts {
+
+        &-head {
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 7px;
+            @include _768 {
+                font-weight: 500;
+            }
+        }
+
+        &-list {
+            display: flex;
+            gap: 67px;
+            @include _768 {
+                flex-direction: column;
+                gap: 18px;
+                margin-bottom: 32px;
+            }
+        }
+
+        &-item {
+            display: flex;
+            flex-direction: column;
+            font-size: 18px;
+            line-height: 24px;
+
+            a:first-of-type {
+                @include _768 {
+                    font-size: 24px;
+                    line-height: 29px;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        @include _768 {
+            align-items: flex-start;
+        }
+
+        img {
+            margin-bottom: 16px;
+            @include _768 {
+                display: none;
+            }
+        }
+
+        a {
+            font-size: 14px;
+            line-height: 17px;
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+.footer-logo {
+    display: none;
+    @include _768 {
+        display: block;
+        margin-bottom: 24px;
+    }
+}

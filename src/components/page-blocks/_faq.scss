@@ -1,0 +1,87 @@
+.faq {
+    margin: 0 auto 75px;
+    max-width: 795px;
+    @include _768 {
+        padding: 0 20px;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        font-size: 34px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 26px;
+        @include _768 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__subhead {
+        margin-bottom: 37px;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        @include _768 {
+            font-size: 16px;
+            line-height: 19px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 7px;
+
+        &.active {
+
+            .faq__head {
+                color: #fff;
+                background-color: $color-primary;
+
+                .icon {
+                    transform: none;
+                }
+            }
+        }
+    }
+
+    &__head {
+        cursor: pointer;
+        border: 1px solid $color-primary;
+        border-radius: 10px;
+        background-color: #fff;
+        color: $color-primary;
+        font-size: 20px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        padding: 28px;
+        margin-bottom: 18px;
+        @include _768 {
+            font-size: 16px;
+            padding: 20px;
+            padding-right: 14px;
+            align-items: center;
+        }
+
+        .icon {
+            transform: rotate(180deg);
+            transition: transform .15s;
+            @include _768 {
+                width: 15px;
+            }
+        }
+    }
+
+    &__content {
+        margin-bottom: 38px;
+        line-height: 22px;
+        font-size: 18px;
+        display: none;
+        overflow: hidden;
+        transition: max-height .15s;
+        @include _768 {
+            font-size: 16px;
+        }
+    }
+}

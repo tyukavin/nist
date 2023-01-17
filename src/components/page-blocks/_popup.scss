@@ -1,0 +1,88 @@
+.fancybox__slide {
+    @include _768 {
+        padding-top: 8px;
+    }
+}
+
+.popup {
+    background-color: $color-primary;
+    color: #000;
+    display: none;
+    flex-direction: column;
+    padding: 30px 115px 55px;
+    align-items: center;
+    @include _768 {
+        padding: 20px;
+    }
+
+    .carousel__button.is-close {
+        top: 15px;
+        right: 15px;
+    }
+
+    .title {
+        color: #fff;
+        margin: 20px 0 30px;
+        text-align: center;
+    }
+
+    .sub-title {
+        margin-bottom: 30px;
+        text-align: center;
+        @include _768 {
+            font-size: 16px;
+        }
+    }
+
+    .form-info {
+        margin-top: 15px;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        @include _768 {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .form-row {
+        margin-bottom: 25px;
+
+        &:last-of-type {
+            margin-bottom: 57px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            background-color: #fff;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            width: 100%;
+
+            &::placeholder {
+                color: #A6A2A2;
+            }
+        }
+    }
+
+    form {
+        min-width: 370px;
+        @include _768 {
+            min-width: 0;
+        }
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

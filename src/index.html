@@ -1,17 +1,257 @@
 <!DOCTYPE html>
 @@include('components/page-blocks/_head.html',{
-"lang":"en",
-"title":"Easy-webdev-startpack v3.0",
-"description":"Gulp pack for easy html/php markup development",
-"keywords":"",
-"favicon":"img/favicons/favicon",
+    "lang":"ru",
+    "title":"Продажа профессионального косметологического оборудования | NistPro",
+    "description":"Продажа и обслуживание оригинального косметологического оборудования. Доставка в регионы и лизинг. Лучшее оборудование от производителей ✓США ✓Израиля ✓Германии ☎️ +7 495 191-71-98 Nist.pro.",
+    "favicon":"img/favicons/favicon",
 })
 
 <body>
-	@@include('components/page-blocks/_header.html')
-	<main class="main"></main>
-	@@include('components/page-blocks/_footer.html')
-	@@include('components/page-blocks/_scripts.html')
+    @@include('components/page-blocks/_header.html')
+
+    <main class="main">
+        @@include('components/page-blocks/_hero.html')
+
+        <div class="nist">
+            <div class="container">
+                <div class="nist__inner">
+                    <div class="nist__img">
+                        <img src="img/nist.png" alt="Nist">
+                    </div>
+                    <div class="nist__content">
+                        <div class="nist__col">
+                            <div class="nist__item active">
+                                <div class="nist__item-head">
+                                    <div class="name">Только оригинальное оборудование</div>
+                                    @@include('components/bem-blocks/_btn-control.html', { "direction": "down", "js-class": "js-nist" })
+                                </div>
+                                <div class="nist__item-content">
+                                    Мы реализуем только сертифицированное оборудование, которое одобрено FDA и обладает всеми необходимыми регистрационными документами (ДС, РУ). Мы также предоставляем номер государственной таможенной декларации.
+                                </div>
+                            </div>
+
+                            <div class="nist__item active">
+                                <div class="nist__item-head">
+                                    <div class="name">Доставка, установка и обучение входит в стоимость</div>
+                                    @@include('components/bem-blocks/_btn-control.html', { "direction": "down", "js-class": "js-nist" })
+                                </div>
+                                <div class="nist__item-content">
+                                    Доставка в любой регион за наш счет. На инсталляцию аппарата в любую точку России приезжает наш инженер, а также врач-тренер, который обучит ваших специалистов тонкостям работы на аппарате.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="nist__col">
+                            <div class="nist__item active">
+                                <div class="nist__item-head">
+                                    <div class="name">Собственная служба доставки</div>
+                                    @@include('components/bem-blocks/_btn-control.html', { "direction": "down", "js-class": "js-nist" })
+                                </div>
+                                <div class="nist__item-content">
+                                    Наша служба доставки надежно упакует и доставит оборудование в радиусе до 700 км от Москвы, что полностью исключает риски перевозки транспортными компаниями.
+                                </div>
+                            </div>
+    
+                            <div class="nist__item active">
+                                <div class="nist__item-head">
+                                    <div class="name">Ремонт и обслуживание</div>
+                                    @@include('components/bem-blocks/_btn-control.html', { "direction": "down", "js-class": "js-nist" })
+                                </div>
+                                <div class="nist__item-content">
+                                    За нашими клиентами мы пожизненно закрепляем право приоритетного ремонта и обслуживания в нашем лицензированном сервисном центре. Мы своевременно и без доплат окажем услуги по ремонту оборудования без очереди.
+                                </div>
+                            </div>
+    
+                            <div class="nist__item active">
+                                <div class="nist__item-head">
+                                    <div class="name">Гарантия 12 месяцев</div>
+                                    @@include('components/bem-blocks/_btn-control.html', { "direction": "down", "js-class": "js-nist" })
+                                </div>
+                                <div class="nist__item-content">
+                                    Все аппараты проходят полное техническое обслуживание и сброшены до заводских настроек. Мы полностью уверены в них, поэтому даем гарантию на 1 год. Наш специалист на связи у вас в мессенджере и всегда готов Вам помочь!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="available">
+            <div class="container">
+                <div class="available__inner">
+                    <h2>В наличии</h2>
+                    <div class="available__list">
+                        <div class="available__item">
+                            <img src="img/available/thermage.png" alt="thermage">
+                            <span>Thermage</span>
+                            <a href="card-item.html" class="btn btn--primary">Подробнее</a>
+                        </div>
+
+                        <div class="available__item">
+                            <img src="img/available/alex-tri.png" alt="alex-tri">
+                            <span>Alex Tri Vantage</span>
+                            <a href="card-item.html" class="btn btn--primary">Подробнее</a>
+                        </div>
+
+                        <div class="available__item">
+                            <img src="img/available/candela.png" alt="candela">
+                            <span>Candela GentleLase</span>
+                            <a href="card-item.html" class="btn btn--primary">Подробнее</a>
+                        </div>
+
+                        <div class="available__item">
+                            <img src="img/available/nordlys.png" alt="nordlys">
+                            <span>Nordlys</span>
+                            <a href="card-item.html" class="btn btn--primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about">
+            <div class="container">
+                <h2 class="select">О компании NIST</h2>
+                <div class="about__inner">
+                    <div class="about__text">
+                        Компания NIST основана в 2012 году и специализируется на продаже косметологического оборудования. За 10 лет работы мы поставили нашим клиентам более 1000 аппаратов, на которые распространяется гарантийное и постгарантийное обслуживание.
+                        Основным направлением деятельности является продажа оборудования премиального сегмента от таких торговых марок как Candela, Sciton, Lutronic, Lumenis, Cynosure, Palomar и другие. Мы предлагаем как абсолютно новое оборудование, так и аппараты «с пробегом», восстановленные до состояния новых – такие аппараты
+                        проходят <span class="text-xl">полную диагностику по 25 параметрам.</span><br>
+                        Гарантия и сервис распространяются на всё наше оборудование независимо от года выпуска.
+                    </div>
+                    <div class="about__slider">
+                        <img src="img/about.jpg" loading="lazy" alt="about">
+                        <img src="img/about-2.jpg" loading="lazy" alt="about">
+                        <img src="img/about-3.jpg" loading="lazy" alt="about">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @@include('components/page-blocks/_params.html')
+
+        <div class="form">
+            <div class="container">
+                <div class="form__inner">
+                    <div class="form__head">
+                        <div>
+                            <div class="form__title">
+                                Наши клиенты не переплачивают<br>
+                                <span>и экономят</span> до 3 млн рублей!
+                            </div>
+                            <div class="form__sub">Хотите так же?</div>
+                        </div>
+                        <img src="img/logo-form.svg" alt="logo" width="243" height="75">
+                    </div>
+                    <div class="form__content">
+                        <input type="text" maxlength="50" placeholder="Имя">
+                        <input type="tel" placeholder="Телефон">
+                        <button class="btn">Получить консультацию</button>
+                    </div>
+                    <div class="form__footer">
+                        Отправляя заявку, Вы автоматически соглашаетесь с <a href="#">Политикой конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="container">
+                <h2>Галерея</h2>
+                <div class="gallery__list">
+                    <img src="img/gallery/gallery-1.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-2.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-3.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-4.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-5.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-6.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-7.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-8.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-9.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-10.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-11.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-12.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                    <img src="img/gallery/gallery-13.jpg" alt="" data-fancybox="gallery-main" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <div class="wiki">
+            <div class="container">
+                <h2 class="select">Материалы WIKI</h2>
+                <div class="wiki__list">
+                    <div class="wiki-item">
+                        <div class="wiki-item__img">
+                            <img src="img/wiki/wiki-1.png" alt="">
+                        </div>
+                        <div class="wiki-item__badge">
+                            <img src="img/wiki/wiki-logo.svg" alt="">
+                            <div class="wiki-item__date">
+                                <div class="name">Wiki</div>
+                                <div class="date">06.07.2022</div>
+                            </div>
+                        </div>
+                        <div class="wiki-item__tit">
+                            CO2RE - Многофункциональный лазерный аппарат фракционного воздействия
+                        </div>
+                        <div class="wiki-item__text">
+                            Современный лазерный аппарат CO2RE представляет собой универсальную платформу для оздоровления кожи. Данная система базируется на платформе лазера CO2. Модель оснащен ультрасовременным сканером, что обеспечивает ему гибкость…
+                        </div>
+                        <a href="https://nist.pro/wiki/" class="wiki-item__link">Подробнее</a>
+                    </div>
+
+                    <div class="wiki-item">
+                        <div class="wiki-item__img">
+                            <img src="img/wiki/wiki-2.png" alt="">
+                        </div>
+                        <div class="wiki-item__badge">
+                            <img src="img/wiki/wiki-logo.svg" alt="">
+                            <div class="wiki-item__date">
+                                <div class="name">Wiki</div>
+                                <div class="date">05.07.2022</div>
+                            </div>
+                        </div>
+                        <div class="wiki-item__tit">
+                            CO2RE Intima - здоровье женщин
+                        </div>
+                        <div class="wiki-item__text">
+                            CO2RE Intima — современный универсальный аппарат, предлагающий широкий спектр процедур шлифовки кожи без… 
+                        </div>
+                        <a href="https://nist.pro/wiki/" class="wiki-item__link">Подробнее</a>
+                    </div>
+
+                    <div class="wiki-item">
+                        <div class="wiki-item__img">
+                            <img src="img/wiki/wiki-3.png" alt="">
+                        </div>
+                        <div class="wiki-item__badge">
+                            <img src="img/wiki/wiki-logo.svg" alt="">
+                            <div class="wiki-item__date">
+                                <div class="name">Wiki</div>
+                                <div class="date">05.07.2022</div>
+                            </div>
+                        </div>
+                        <div class="wiki-item__tit">
+                            VBeam Perfecta: передовое решение для лечения сосудистых поражений кожи
+                        </div>
+                        <div class="wiki-item__text">
+                            Данный аппарат пользуется огромной популярностью и находит широкое применение в лучших косметологических клиниках.… 
+                        </div>
+                        <a href="https://nist.pro/wiki/" class="wiki-item__link">Подробнее</a>
+                    </div>
+                </div>
+                <div class="wiki__action">
+                    <a href="https://nist.pro/wiki/" class="btn btn--primary">Все материалы</a>
+                </div>
+            </div>
+        </div>
+
+        @@include('components/page-blocks/_contacts.html')
+    </main>
+
+    @@include('components/page-blocks/_footer.html')
+    @@include('components/page-blocks/_scripts.html')
 </body>
 
 </html>

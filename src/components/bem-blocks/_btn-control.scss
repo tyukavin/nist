@@ -1,0 +1,49 @@
+.btn-control {
+    @include no-btn();
+    background-color: $color-primary;
+    border-radius: 3px;
+    box-shadow: none;
+    cursor: pointer;
+    height: 22px;
+    width: 22px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow .15s ease, transform .15s ease;
+
+    &:hover {
+        box-shadow: 0 0 5px 2px $color-primary;
+    }
+
+    &--down {
+        img {
+            transform: rotate(0);
+        }
+    }
+
+    &--top {
+        img {
+            transform: rotate(180deg);
+        }
+    }
+
+    &--right {
+        img {
+            transform: rotate(90deg);
+        }
+    }
+
+    &--left {
+        img {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.active {
+
+    .btn-control {
+        transform: rotate(180deg);
+    }
+}

@@ -1,0 +1,330 @@
+.leasing-hero {
+    position: relative;
+    height: 710px;
+    margin-bottom: 100px;
+    @include _768 {
+        margin-bottom: 50px;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    &__inner {
+        position: relative;
+        padding-top: 230px;
+    }
+
+    &__title {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 48px;
+        margin-bottom: 23px;
+        text-transform: uppercase;
+        @include _768 {
+            font-size: 30px;
+            line-height: 36px;
+            text-transform: none;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__subhead {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 100px;
+        @include _768 {
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__action {
+        .btn {
+            width: 100%;
+            &:first-child {
+                @include _768 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.leasing-us {
+    margin-bottom: 100px;
+    @include _768 {
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 50px;
+        @include _768 {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        gap: 50px;
+        @include _768 {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        @include _768 {
+            flex-direction: column;
+        }
+    }
+
+    &__img {
+        margin-right: 32px;
+        flex: none;
+        @include _768 {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__name {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        @include _768 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 22px;
+        @include _768 {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}
+
+.leasing-benefit {
+    background-color: $color-primary;
+    padding: 50px 0;
+    margin-bottom: 100px;
+    @include _768 {
+        margin-bottom: 50px;
+        padding: 30px 0;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+        @include _768 {
+            gap: 30px;
+        }
+
+        h2 {
+            color: #fff;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 28px;
+        @include _768 {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        width: calc(100% / 3);
+        display: flex;
+        @include _768 {
+            width: 100%;
+        }
+
+        .number {
+            color: #fff;
+            font-size: 48px;
+            font-weight: 700;
+            margin-right: 13px;
+            line-height: 36px;
+            @include _768 {
+                min-width: 66px
+            }
+        }
+
+        .text {
+            font-size: 18px;
+            font-weight: 500;
+            @include _768 {
+                font-size: 16px;
+            }
+        }
+
+        .white {
+            color: #fff;
+        }
+    }
+}
+
+.leasing-stages {
+    margin-bottom: 100px;
+    display: flex;
+    @include _768 {
+        margin-bottom: 50px;
+        flex-direction: column;
+    }
+
+    h2 {
+        flex: none;
+        margin-right: 120px;
+        @include _768 {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 78px;
+        position: relative;
+        @include _768 {
+            gap: 30px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 55px;
+            border-left: 2px dashed $color-primary;
+            height: 100%;
+            z-index: -1;
+            @include _768 {
+                display: none;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        @include _768 {
+            flex-direction: column;
+        }
+    }
+
+    &__num {
+        background-color: $color-primary;
+        color: #fff;
+        border-radius: 50%;
+        height: 112px;
+        width: 112px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: none;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+        margin-right: 40px;
+        @include _768 {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 22px;
+        width: 60%;
+        @include _768 {
+            width: 100%;
+            font-size: 16px;
+            line-height: 19px;
+            text-align: center;
+        }
+    }
+}
+
+.leasing-partner {
+    display: flex;
+    margin-bottom: 100px;
+    @include _768 {
+        margin-bottom: 50px;
+        flex-direction: column;
+    }
+
+    h2 {
+        flex: none;
+        margin-right: 109px;
+        @include _768 {
+            margin-right: 0;
+            margin-bottom: 30px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 50px;
+        @include _768 {
+            margin-bottom: 34px;
+        }
+    }
+
+    .list-partner {
+        display: flex;
+        gap: 20px;
+        @include _768 {
+            flex-wrap: wrap;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 25%;
+            @include _768 {
+                width: 47%;
+            }
+
+            img {
+                flex: none;
+            }
+
+            span {
+                margin-top: 30px;
+                font-size: 18px;
+                @include _768 {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

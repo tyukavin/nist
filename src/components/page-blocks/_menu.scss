@@ -1,0 +1,76 @@
+.menu {
+    display: none;
+    @include _768 {
+        display: block;
+        width: 100vw;
+        background-color: #000;
+        z-index: 999;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .15s ease-in;
+        overflow: hidden;
+
+        &.show {
+            opacity: 1;
+            pointer-events: all
+        }
+
+        &__inner {
+            padding-top: 6vh;
+            padding-bottom: 6vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .close {
+            @include no-btn();
+            position: absolute;
+            top: 40px;
+            right: 20px;
+        }
+
+        .logo {
+            margin-bottom: 12vh;
+        }
+
+        &__nav {
+            margin-bottom: 8vh;
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li {
+                text-align: center;
+                margin-bottom: 21px;
+            }
+
+            a {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        .btn-wiki {
+            flex: none;
+        }
+
+        &__phone {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 7vh;
+        }
+    }
+}
