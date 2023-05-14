@@ -1,10 +1,6 @@
 .service-hero {
     position: relative;
     height: 710px;
-    margin-bottom: 100px;
-    @include _768 {
-        margin-bottom: 50px;
-    }
 
     &__img {
         position: absolute;
@@ -63,8 +59,10 @@
 }
 
 .service-benefit {
+    padding-top: 100px;
     margin-bottom: 100px;
     @include _768 {
+        padding-top: 50px;
         margin-bottom: 50px;
     }
 

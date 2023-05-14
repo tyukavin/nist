@@ -15,6 +15,10 @@
         position: absolute;
     }
 
+    .logo {
+        margin-right: 30px;
+    }
+
     &__inner {
         display: flex;
         align-items: center;
@@ -37,6 +41,11 @@
             li {
                 margin-right: 26px;
                 line-height: 90px;
+
+                &.active > a {
+                    color: $color-primary;
+                    cursor: default;
+                }
             }
         }
 
@@ -97,6 +106,41 @@
     }
 }
 
+.item-inner {
+    position: relative;
+
+    &:hover {
+        ul.inner-menu {
+            opacity: 1;
+            pointer-events: all;
+            transform: none;
+        }
+    }
+}
+
+ul.inner-menu {
+    position: absolute;
+    display: block;
+    top: 90px;
+    left: -20px;
+    background-color: #000;
+    padding: 10px 20px;
+    min-width: 250px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: .1s;
+
+    & > li {
+        display: block;
+        line-height: 40px;
+
+        a {
+            font-size: 16px;
+        }
+    }
+}
+
 .btn-wiki {
     background-color: #ea4033;
     border-radius: 10px;
@@ -124,5 +168,67 @@
 
     img {
         margin-left: 5px;
+    }
+}
+
+.invert .btn-search {
+    color: #fff
+}
+
+.btn-search {
+    @include no-btn();
+    color: #fff;
+    background-color: transparent;
+    padding: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    transition: color .2s;
+    @include _768 {
+        color: $color-primary;
+    }
+
+    &.active {
+        color: #000;
+    }
+
+    &:hover {
+        color: $color-primary;
+    }
+
+    svg {
+        fill: currentColor;
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.header-search {
+    position: relative;
+
+    &__form {
+        position: absolute;
+        right: 0;
+        top: 3px;
+        display: none;
+    }
+
+    &__input {
+        background-color: #D6D5D5;
+        border-radius: 7px;
+        border: none;
+        height: 34px;
+        padding: 5px 15px;
+        font-size: 14px;
+        min-width: 360px;
+        @include _768 {
+            min-width: 75vw;
+        }
+
+        &::placeholder {
+            color: #4E4E4E;
+        }
     }
 }

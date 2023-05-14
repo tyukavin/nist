@@ -11,6 +11,7 @@
     flex-direction: column;
     padding: 30px 115px 55px;
     align-items: center;
+    max-width: 700px;
     @include _768 {
         padding: 20px;
     }

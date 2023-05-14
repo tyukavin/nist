@@ -12,8 +12,43 @@
     <main class="main">
         @@include('components/page-blocks/_hero.html')
 
+        <div class="numbers">
+            <div class="container">
+                <div class="numbers__inner">
+                    <div class="number-item">
+                        <div class="number-item__num">
+                            <span data-number="60">0</span>
+                        </div>
+                        <div class="number-item__caption">дней доставка</div>
+                    </div>
+
+                    <div class="number-item">
+                        <div class="number-item__num">
+                            <span data-number="700">0</span>+
+                        </div>
+                        <div class="number-item__caption">довольных клиентов</div>
+                    </div>
+
+                    <div class="number-item">
+                        <div class="number-item__num">
+                            <span data-number="1200">0</span>+
+                        </div>
+                        <div class="number-item__caption">установленных аппаратов</div>
+                    </div>
+
+                    <div class="number-item">
+                        <div class="number-item__num">
+                            <span data-number="2010">0</span>
+                        </div>
+                        <div class="number-item__caption">год основания компании</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="nist">
             <div class="container">
+                <h2>Почему клиенты выбирают нас?</h2>
                 <div class="nist__inner">
                     <div class="nist__img">
                         <img src="img/nist.png" alt="Nist">
@@ -40,7 +75,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="nist__col">
                             <div class="nist__item active">
                                 <div class="nist__item-head">
@@ -51,7 +86,7 @@
                                     Наша служба доставки надежно упакует и доставит оборудование в радиусе до 700 км от Москвы, что полностью исключает риски перевозки транспортными компаниями.
                                 </div>
                             </div>
-    
+
                             <div class="nist__item active">
                                 <div class="nist__item-head">
                                     <div class="name">Ремонт и обслуживание</div>
@@ -61,7 +96,7 @@
                                     За нашими клиентами мы пожизненно закрепляем право приоритетного ремонта и обслуживания в нашем лицензированном сервисном центре. Мы своевременно и без доплат окажем услуги по ремонту оборудования без очереди.
                                 </div>
                             </div>
-    
+
                             <div class="nist__item active">
                                 <div class="nist__item-head">
                                     <div class="name">Гарантия 12 месяцев</div>
@@ -77,11 +112,110 @@
             </div>
         </div>
 
+        <div class="procedure">
+            <div class="container">
+                <h2>Оборудование по&nbsp;категориям</h2>
+                <div class="procedure__inner">
+                    <div class="procedure__row">
+                        <a href="#" class="procedure-item">
+                            <picture class="procedure-item__img laser">
+                                <source srcset="img/procedure/laser-min.webp" type="image/webp" />
+                                <img src="img/procedure/laser-min.png" alt="Лазерная эпиляция" />
+                            </picture>
+                            <div class="procedure-item__name">
+                                Лазерная
+                                <span>эпиляция</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="procedure-item">
+                            <picture class="procedure-item__img antiage">
+                                <source srcset="img/procedure/anti-age-min.webp" type="image/webp" />
+                                <img src="img/procedure/anti-age-min.png" alt="Anti-age профилактика" />
+                            </picture>
+                            <div class="procedure-item__name">
+                                Anti-age
+                                <span>профилактика</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="procedure-item">
+                            <picture class="procedure-item__img relef">
+                                <source srcset="img/procedure/relief-min.png" type="image/webp" />
+                                <img src="img/procedure/relief-min.png" alt="Выравнивание рельефа кожи" />
+                            </picture>
+                            <div class="procedure-item__name">
+                                Выравнивание
+                                <span>рельефа кожи</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="procedure-item">
+                            <picture class="procedure-item__img tone">
+                                <source srcset="img/procedure/ton-min.webp" type="image/webp" />
+                                <img src="img/procedure/ton-min.png" alt="Выравнивание тона кожи" />
+                            </picture>
+                            <div class="procedure-item__name">
+                                Выравнивание
+                                <span>тона кожи</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="procedure__row">
+                        <a href="#" class="procedure-item">
+                            <picture class="procedure-item__img sosud">
+                                <source srcset="img/procedure/sosud-min.webp" type="image/webp" />
+                                <img src="img/procedure/sosud-min.png" alt="Лечение сосудистых паталогий" />
+                            </picture>
+                            <div class="procedure-item__name">
+                                Лечение
+                                <span>сосудистых паталогий</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="procedure-item">
+                            <picture class="procedure-item__img forbody">
+                                <source srcset="img/procedure/for-body-min.webp" type="image/webp" />
+                                <img src="img/procedure/for-body-min.png" alt="Для тела и фигуры" />
+                            </picture>
+                            <div class="procedure-item__name">
+                                Для тела
+                                <span>и фигуры</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="procedure-item">
+                            <picture class="procedure-item__img podtaysh">
+                                <source srcset="img/procedure/podtayzh-min.webp" type="image/webp" />
+                                <img src="img/procedure/podtayzh-min.png" alt="Подтяжка кожи" />
+                            </picture>
+                            <div class="procedure-item__name">
+                                Подтяжка
+                                <span>кожи</span>
+                            </div>
+                        </a>
+
+                        <a href="#" class="procedure-item">
+                            <picture class="procedure-item__img tatoo">
+                                <source srcset="img/procedure/tatoo-min.webp" type="image/webp" />
+                                <img src="img/procedure/tatoo-min.png" alt="Удаление татуировок" />
+                            </picture>
+                            <div class="procedure-item__name">
+                                Удаление
+                                <span>татуировок</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="available">
             <div class="container">
                 <div class="available__inner">
                     <h2>В наличии</h2>
-                    <div class="available__list">
+                    <div class="available__list available-list--main">
                         <div class="available__item">
                             <img src="img/available/thermage.png" alt="thermage">
                             <span>Thermage</span>
@@ -106,6 +240,15 @@
                             <a href="card-item.html" class="btn btn--primary">Подробнее</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trust">
+            <div class="container">
+                <h2>Нам доверяют</h2>
+                <div class="trust__inner">
+                    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A381c0276c24327506617a3d06a7944d9766de668b9e583c969dfc344c7cf1f24&amp;width=100%25&amp;height=590&amp;lang=ru_RU&amp;scroll=false"></script>
                 </div>
             </div>
         </div>
@@ -216,7 +359,7 @@
                             CO2RE Intima - здоровье женщин
                         </div>
                         <div class="wiki-item__text">
-                            CO2RE Intima — современный универсальный аппарат, предлагающий широкий спектр процедур шлифовки кожи без… 
+                            CO2RE Intima — современный универсальный аппарат, предлагающий широкий спектр процедур шлифовки кожи без…
                         </div>
                         <a href="https://nist.pro/wiki/" class="wiki-item__link">Подробнее</a>
                     </div>
@@ -236,7 +379,7 @@
                             VBeam Perfecta: передовое решение для лечения сосудистых поражений кожи
                         </div>
                         <div class="wiki-item__text">
-                            Данный аппарат пользуется огромной популярностью и находит широкое применение в лучших косметологических клиниках.… 
+                            Данный аппарат пользуется огромной популярностью и находит широкое применение в лучших косметологических клиниках.…
                         </div>
                         <a href="https://nist.pro/wiki/" class="wiki-item__link">Подробнее</a>
                     </div>

@@ -1,7 +1,46 @@
 .hero {
     position: relative;
+    height: 780px;
     @include _768 {
         height: 720px;
+    }
+
+    &--search {
+        height: auto;
+        min-height: 780px;
+
+        .hero__main {
+            padding: 25px 0;
+            @include _768 {
+                padding: 62px 0;
+            }
+        }
+
+        .hero__desc {
+            color: #000;
+            margin-bottom: 25px;
+
+            a {
+                color: #000;
+                text-decoration: underline;
+            }
+        }
+
+        .mse2-row {
+            margin-bottom: 20px;
+
+            a {
+                color: #000;
+                font-size: 18px;
+                display: inline-block;
+                margin-bottom: 7px;
+                text-decoration: underline;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
     }
 
     &__inner {
@@ -11,11 +50,12 @@
 
     &__main-img {
         position: absolute;
-        height: 720px;
+        height: 780px;
         right: 0;
         z-index: 0;
         width: calc((100vw - 1200px) / 2 + 1200px - 183px);
         @include _768 {
+            height: 720px;
             width: 100%;
         }
 
@@ -28,7 +68,8 @@
     }
 
     &__aside {
-        padding: 33px 43px 33px 0;
+        padding: 33px 33px 33px 0;
+        width: 175px;
         @include _768 {
             background-color: #fff;
             position: fixed;
@@ -54,6 +95,14 @@
                 padding: 33px 0;
                 overflow-y: auto;
                 height: 100%;
+            }
+
+            a {
+                transition: filter .15s;
+
+                &:hover {
+                    filter: grayscale(1);
+                }
             }
         }
 

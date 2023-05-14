@@ -5,11 +5,7 @@
     }
 
     h2 {
-        margin-bottom: 94px;
-        @include _768 {
-            margin-bottom: 36px;
-            text-align: center;
-        }
+        margin-bottom: 30px;
     }
 
     &__list {
@@ -34,6 +30,11 @@
         }
     }
 
+    &--card {
+        margin-right: -20px;
+        margin-left: -20px;
+    }
+
     .wiki-item {
         flex: 1;
 
@@ -43,9 +44,20 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 13px;
+            height: 350px;
+            overflow: hidden;
             @include _768 {
+                height: 250px;
                 min-height: auto;
                 margin-bottom: 40px;
+            }
+
+            img {
+                border-radius: 5px;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                object-position: bottom;
             }
         }
 
@@ -79,6 +91,8 @@
         }
 
         &__tit {
+            color: inherit;
+            display: inline-block;
             font-size: 20px;
             font-weight: 500;
             line-height: 24px;
@@ -87,6 +101,10 @@
                 font-size: 18px;
                 line-height: 22px;
                 margin-bottom: 14px;
+            }
+
+            &:hover {
+                text-decoration: underline;
             }
         }
 
@@ -116,10 +134,7 @@
     &--card {
 
         h2 {
-            margin-bottom: 68px;
-            @include _768 {
-                margin-bottom: 30px;
-            }
+            margin-bottom: 30px;
         }
     }
 }

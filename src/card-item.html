@@ -66,7 +66,9 @@
                     </div>
                     <ul class="card-params">
                         <li>Страна производитель: США</li>
-                        <li>Гарантия: 12 мес</li>
+                        <li>
+                            <button class="btn-link js-btn-garant" data-scroll="garant-scroll">Гарантия: 12 мес</button>
+                        </li>
                         <li>Платформа: мультиплатформа</li>
                         <li>Принцип действия: фотосистема, лазер</li>
                         <li>Процедуры: фотолечение BBL</li>
@@ -81,11 +83,16 @@
                         <button class="btn btn--primary" data-fancybox="dialog" data-src="#dialog-popup">
                             Получить прайс
                         </button>
+
+                        <button class="btn btn--primary-outline" data-fancybox="dialog-leasing" data-src="#dialog-popup">
+                            Интересует лизинг
+                        </button>
                     </div>
                 </div>
             </div>
 
             <div class="card-tab">
+                <img class="logo-mobile" src="img/card/logo-tab.svg" alt="">
                 <div class="card-tab__head">
                     <div class="tab-list">
                         <div class="tab-list__item">Описание</div>
@@ -97,8 +104,8 @@
                 <div class="card-tab__content">
                     <div class="tab-content">
                         <div class="tab-content__item">
-                            <div class="tab-content__inner">
-                                <img src="img/card/logo-tab.svg" alt="">
+                            <div class="tab-content__inner tab-content__inner--flex">
+                                <img class="logo" src="img/card/logo-tab.svg" alt="">
                                 <div>
                                     <p>Лазер ProFractional - фракционный эрбиевый лазер 2940 нм, позволяющий эмулировать (воспроизводить) работу наиболее распространенных абляционных лазеров, благодаря точному контролю глубины абляции и степени коагуляции.</p>
                                     <p>ТРИ фракционных лазера в одном!</p>
@@ -109,7 +116,15 @@
                         </div>
                         <div class="tab-content__item active">
                             <div class="tab-content__inner">
-                                <img src="img/card/logo-tab.svg" alt="">
+                                <div class="ginfo tab-content__main"> <div class="ginfo__row flex"> <div class="ginfo__col">Тип лазера</div> <div class="ginfo__col">Длинноимпульсный александритовый</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Система передачи</div> <div class="ginfo__col">Оптоволокно с наконечником</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Длина волны, нм</div> <div class="ginfo__col">755 нм</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Длительность импульса</div> <div class="ginfo__col">3 мс</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Плотность излучения (Дж/см²)</div> <div class="ginfo__col">до 100 Дж/см²</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Мощность (мДж)</div> <div class="ginfo__col">800 мДж</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Размер пятна (мм)</div> <div class="ginfo__col">6 мм, 8 мм; 10 мм, 12 мм; 15 мм, 18 мм</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Интерфейс</div> <div class="ginfo__col">Сенсорный монитор</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Управление импульсом</div> <div class="ginfo__col">Интегрированное управление, контейнер с криогеном и рукоятка с дистанцирующей насадкой</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Размеры (высота x ширина x длина, см)</div> <div class="ginfo__col">89 х 41 х 71 (см)</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Вес, кг</div> <div class="ginfo__col">95 кг</div> </div><div class="ginfo__row flex"> <div class="ginfo__col">Электросеть</div> <div class="ginfo__col">230 В, 50/60 Гц, 20 А</div> </div> </div>
+                                <div class="tab-content__footer">
+                                    <button class="btn-collapse">Развернуть</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content__item">
+                            <div class="tab-content__inner">
+                                <img class="logo" src="img/card/logo-tab.svg" alt="">
                                 <div>
                                     <p>Лазер ProFractional - фракционный эрбиевый лазер 2940 нм, позволяющий эмулировать (воспроизводить) работу наиболее распространенных абляционных лазеров, благодаря точному контролю глубины абляции и степени коагуляции.</p>
                                     <p>ТРИ фракционных лазера в одном!</p>
@@ -120,18 +135,7 @@
                         </div>
                         <div class="tab-content__item">
                             <div class="tab-content__inner">
-                                <img src="img/card/logo-tab.svg" alt="">
-                                <div>
-                                    <p>Лазер ProFractional - фракционный эрбиевый лазер 2940 нм, позволяющий эмулировать (воспроизводить) работу наиболее распространенных абляционных лазеров, благодаря точному контролю глубины абляции и степени коагуляции.</p>
-                                    <p>ТРИ фракционных лазера в одном!</p>
-                                    <p>Модуль ProFractional с технологией TRL представляет собой лазер, который эмулирует - воспроизводит параметры трех основных абляционных лазеров: Er:YAG - эрбиевого лазера, YSGG-лазера, CO2-лазера.</p>
-                                    <p>Таким образом, врач имеет в своём распоряжении 3 фракционных лазера! Выбирая кнопку в меню, Вы выбираете лазер, которым будете проводить процедуру.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content__item">
-                            <div class="tab-content__inner">
-                                <img src="img/card/logo-tab.svg" alt="">
+                                <img class="logo" src="img/card/logo-tab.svg" alt="">
                                 <div>
                                     <p>Лазер ProFractional - фракционный эрбиевый лазер 2940 нм, позволяющий эмулировать (воспроизводить) работу наиболее распространенных абляционных лазеров, благодаря точному контролю глубины абляции и степени коагуляции.</p>
                                     <p>ТРИ фракционных лазера в одном!</p>
@@ -173,18 +177,85 @@
                 </div>
             </div>
 
+            <div class="nist nist--card">
+                <div class="nist__inner">
+                    <div class="nist__img">
+                        <img src="img/nist.png" alt="Nist" loading="lazy">
+                    </div>
+                    <div class="nist__content">
+                        <div class="nist__col">
+                            <div class="nist__item">
+                                <div class="nist__item-head">
+                                    <div class="name">Только оригинальное оборудование</div>
+                                    <button class="btn-control btn-control--down js-nist">
+                                        <img src="img/arrow-down.svg" loading="lazy" alt="arrow" width="12" height="6">
+                                    </button>
+                                </div>
+                                <div class="nist__item-content" style="display: none;">
+                                    Мы реализуем только сертифицированное оборудование, которое одобрено FDA и обладает всеми необходимыми регистрационными документами (ДС, РУ). Мы также предоставляем номер государственной таможенной декларации.
+                                </div>
+                            </div>
+
+                            <div class="nist__item active">
+                                <div class="nist__item-head">
+                                    <div class="name">Доставка, установка и обучение входят в стоимость</div>
+                                    <button class="btn-control btn-control--down js-nist">
+                                        <img src="img/arrow-down.svg" loading="lazy" alt="arrow" width="12" height="6">
+                                    </button>
+                                </div>
+                                <div class="nist__item-content">
+                                    Доставка в любой регион за наш счет. На инсталляцию аппарата в любую точку России приезжает наш инженер, а также врач-тренер, который обучит ваших специалистов тонкостям работы на аппарате.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="nist__col">
+                            <div class="nist__item">
+                                <div class="nist__item-head">
+                                    <div class="name">Собственная служба доставки</div>
+                                    <button class="btn-control btn-control--down js-nist">
+                                        <img src="img/arrow-down.svg" loading="lazy" alt="arrow" width="12" height="6">
+                                    </button>
+                                </div>
+                                <div class="nist__item-content" style="display: none;">
+                                    Наша служба доставки надежно упакует и доставит оборудование в радиусе до 700 км от Москвы, что полностью исключает риски перевозки транспортными компаниями.
+                                </div>
+                            </div>
+
+                            <div class="nist__item">
+                                <div class="nist__item-head">
+                                    <div class="name">Ремонт и обслуживание</div>
+                                    <button class="btn-control btn-control--down js-nist">
+                                        <img src="img/arrow-down.svg" loading="lazy" alt="arrow" width="12" height="6">
+                                    </button>
+                                </div>
+                                <div class="nist__item-content" style="display: none;">
+                                    За нашими клиентами мы пожизненно закрепляем право приоритетного ремонта и обслуживания в нашем лицензированном сервисном центре. Мы своевременно и без доплат окажем услуги по ремонту оборудования без очереди.
+                                </div>
+                            </div>
+
+                            <div class="nist__item active" id="garant-scroll">
+                                <div class="nist__item-head">
+                                    <div class="name">Гарантия 12 месяцев</div>
+                                    <button class="btn-control btn-control--down js-nist">
+                                        <img src="img/arrow-down.svg" loading="lazy" alt="arrow" width="12" height="6">
+                                    </button>
+                                </div>
+                                <div class="nist__item-content">
+                                    Все аппараты проходят полное техническое обслуживание и сброшены до заводских настроек. Мы полностью уверены в них, поэтому даем гарантию на 1 год. Наш специалист на связи у вас в мессенджере и всегда готов Вам помочь!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="card-gallery">
-                <div class="card-gallery__column">
-                    <img src="img/card/card-item-1.jpg" data-fancybox="card-item" alt="">
-                    <img src="img/card/card-item-2.jpg" data-fancybox="card-item" alt="">
-                </div>
-                <div class="card-gallery__column">
-                    <img src="img/card/card-item-3.jpg" data-fancybox="card-item" alt="">
-                </div>
-                <div class="card-gallery__column">
-                    <img src="img/card/card-item-4.jpg" data-fancybox="card-item" alt="">
-                    <img src="img/card/card-item-5.jpg" data-fancybox="card-item" alt="">
-                </div>
+                <img src="img/card/card-item-1.jpg" data-fancybox="card-item" alt="">
+                <img src="img/card/card-item-2.jpg" data-fancybox="card-item" alt="">
+                <img src="img/card/card-item-3.jpg" data-fancybox="card-item" alt="">
+                <img src="img/card/card-item-4.jpg" data-fancybox="card-item" alt="">
+                <img src="img/card/card-item-5.jpg" data-fancybox="card-item" alt="">
             </div>
 
             <div class="card-gallery-mobile">
