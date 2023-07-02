@@ -12,6 +12,15 @@ $(document).ready(function() {
 
     $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-99-99"});
 
+    $(".slider-nav img:first-child").addClass("active");
+    $(".slider-main > *:first-child").addClass("active");
+
+    var currentVideo = $('.slider-main video');
+
+    if (currentVideo.length > 0) {
+        currentVideo.get(0).play();
+    }
+
     Fancybox.bind("[data-fancybox]", {
         Thumbs: {
             autoStart: false,
@@ -28,44 +37,43 @@ $(document).ready(function() {
         dragToClose: false
     });
 
-    $('.js-slider-main').slick({
-        slidesToShow: 1,
+    $('.js-trust-slider').slick({
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        fade: true,
-        asNavFor: '.js-slider-nav',
-        adaptiveHeight: true,
-        draggable: false,
-        infinite: true,
-    });
-
-    $('.js-slider-nav').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        prevArrow: '.js-slider-nav-prev',
-        nextArrow: '.card-slider__next',
-        asNavFor: '.js-slider-main',
         focusOnSelect: true,
-        vertical: true,
-        adaptiveHeight: true,
-        draggable: false,
-        infinite: true,
-        dots: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
                     arrows: false,
-                    vertical: false,
-                    fade: false,
-                    slidesToShow: 3,
-                    infinite: true,
                     centerMode: true,
-                    draggable: true,
-                    dots: false
+                    centerPadding: '40px',
+                    slidesToShow: 1
                 }
-            }
+            },
         ]
+    });
+
+    $(".slider-nav img").click(function() {
+
+        $(".slider-nav img").removeClass("active");
+        $(this).addClass("active");
+
+        $(".slider-main > *").removeClass("active");
+        $(".slider-main > *").eq($(this).index()).addClass("active");
+
+        var video = $('.slider-main video')[0];
+
+        if ($('.slider-main video').parent().hasClass('active')) {
+
+            video.play();
+        } else {
+
+            video.pause();
+        }
     });
 
     $('.slider-license').slick({
@@ -285,6 +293,25 @@ $(document).ready(function() {
             $(".js-search-form").hide();
             $(".js-btn-search").removeClass("active");
         }
+    });
+
+    $(".service-info__item").click(function() {
+
+        $(".service-info__item").removeClass("active");
+        $(this).addClass("active");
+
+        $(".service-info__content").removeClass("active");
+        $(".service-info__content").eq($(this).index()).addClass("active");
+    });
+
+    document.addEventListener('copy', function(event) {
+
+        const selectedText = window.getSelection().toString();
+        const copiedText = selectedText + '\n\nПодробнее: ' + window.location.href;
+
+        event.clipboardData.setData('text/plain', copiedText);
+
+        event.preventDefault();
     });
 
 });

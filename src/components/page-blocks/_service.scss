@@ -250,6 +250,142 @@
     }
 }
 
+.service-info {
+    margin-bottom: 100px;
+    @include _768 {
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    &__brands {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 35px;
+        @include _768 {
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        position: relative;
+        height: 85px;
+        width: 17%;
+        @include _768 {
+            height: 56px;
+            width: 45%;
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 75%;
+            will-change: transform;
+        }
+
+        &:hover {
+            border-color: $color-primary;
+        }
+
+        .img {
+            opacity: 1;
+        }
+
+        .hover-img {
+            opacity: 0;
+        }
+
+        &.active {
+            background-color: $color-primary;
+
+            img {
+                opacity: 0;
+            }
+
+            .hover-img {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__tab {
+        border-bottom: 2px solid #000;
+        display: flex;
+        align-items: center;
+    }
+
+    &__title {
+        color: $color-primary;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        padding: 7px 32px;
+        position: relative;
+        @include _768 {
+            font-size: 18px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 8px;
+            background-color: #ea4033;
+            bottom: -5px;
+            transform: translateX(-50%);
+            @include _768 {
+                height: 6px;
+            }
+        }
+    }
+
+    &__col {
+        flex: 1;
+
+        p {
+            margin-bottom: 8px;
+        }
+    }
+
+    &__content {
+        padding: 50px 35px 0;
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 15px;
+        display: none;
+        @include _768 {
+            padding: 25px 0;
+            font-size: 16px;
+        }
+
+        &.active {
+            display: flex;
+            gap: 30px;
+            @include _768 {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+}
+
 .service-license {
     margin-bottom: 100px;
     @include _768 {

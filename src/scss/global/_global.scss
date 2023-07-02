@@ -565,6 +565,47 @@ p {
     }
 }
 
+.trust-slider {
+    margin: 0 -20px;
+    margin-bottom: 45px;
+    width: calc(100% + 40px);
+    @include _768 {
+        margin-bottom: 30px;
+    }
+
+    .slick-track {
+        padding: 20px 0;
+        @include _768 {
+            padding: 0;
+        }
+    }
+
+    &__item {
+        height: 440px;
+        padding: 30px;
+        transition: transform .1s;
+        will-change: transform;
+        @include _768 {
+            padding: 15px;
+            height: 350px;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            object-position: top left;
+        }
+
+        &.slick-current + .slick-slide {
+            transform: scale(1.1);
+            @include _768 {
+                transform: none;
+            }
+        }
+    }
+}
+
 .form {
     color: #fff;
     margin-bottom: 100px;
@@ -655,13 +696,13 @@ p {
         input {
             appearance: none;
             background-color: transparent;
+            border: 1px solid transparent;
+            border-bottom-color: #fff;
             color: #fff;
             font-size: 18px;
             flex: 1 1 100%;
-            border: none;
             padding: 7px 0;
             outline: none;
-            border-bottom: 1px solid #fff;
             width: 100%;
             @include _768 {
                 font-size: 16px;
@@ -674,6 +715,7 @@ p {
         }
 
         .btn {
+            flex: 1 1 100%;
             @include _768 {
                 width: 100%;
             }
@@ -810,31 +852,89 @@ p {
     }
 }
 
+.card-info {
+    padding-top: 15px;
+    @include _768 {
+        padding-top: 0;
+    }
+}
+
 .card-slider {
     margin-right: 50px;
     display: flex;
-    width: 494px;
+    height: 535px;
     @include _768 {
         flex-direction: column-reverse;
         margin-right: 0;
+        height: auto;
         width: 100%;
+    }
+
+    .slider-nav {
+        overflow-y: auto;
+        height: 100%;
+        padding-right: 10px;
+        @include scrollbarItems();
+        @include _768 {
+            display: flex;
+            height: auto;
+            padding-right: 0;
+            padding-bottom: 10px;
+        }
+    }
+
+    .slider-main {
+
+        & > * {
+            position: absolute;
+            opacity: 0;
+            pointer-events: none;
+            height: 100%;
+            width: 100%;
+            transition: opacity .15s;
+
+            &.active {
+                opacity: 1;
+                pointer-events: all;
+            }
+        }
     }
 
     &__nav {
         flex: none;
-        margin-right: 17px;
-        width: 90px;
+        margin-right: 25px;
+        overflow: hidden;
+        height: 100%;
+        width: 100px;
         position: relative;
         @include _768 {
             margin: 0 0 22px;
+            height: auto;
             width: 100%;
         }
 
         img {
+            border: 2px solid transparent;
             margin-bottom: 8px;
             @include _768 {
                 margin: 0 8px;
-                max-width: 95px;
+                max-width: 55px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.active {
+                border-color: $color-primary;
             }
         }
     }
@@ -860,25 +960,50 @@ p {
         right: 24px;
         z-index: 1;
         pointer-events: none;
+        @include _768 {
+            top: 15px;
+            right: 20px;
+        }
     }
 
     &__verified {
         position: absolute;
         left: 0;
         bottom: 8px;
+        text-align: left;
         z-index: 1;
+        @include _768 {
+            height: 40px;
+            bottom: 15px;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: left;
+        }
     }
 
     &__main {
         cursor: pointer;
         position: relative;
-        height: 533px;
-        width: 387px;
+        height: 535px;
+        width: 420px;
         overflow: hidden;
         @include _768 {
-            height: auto;
+            height: 450px;
             width: 100%;
             margin-bottom: 13px;
+        }
+
+        video {
+            object-fit: cover;
+            object-position: center;
+            @include _768 {
+                height: 100%;
+                width: 100% !important;
+            }
         }
     }
 }
@@ -937,7 +1062,7 @@ p {
 .card-subinfo {
     font-size: 14px;
     line-height: 17px;
-    margin-bottom: 54px;
+    margin-bottom: 40px;
     @include _768 {
         font-size: 12px;
         line-height: 14px;
@@ -1619,10 +1744,7 @@ p {
 .trust {
 
     h2 {
-        margin-bottom: 50px;
-        @include _768 {
-            margin-bottom: 30px;
-        }
+        margin-bottom: 30px;
     }
 }
 

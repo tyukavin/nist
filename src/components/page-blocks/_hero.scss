@@ -2,7 +2,12 @@
     position: relative;
     height: 780px;
     @include _768 {
-        height: 720px;
+        height: 100vh;
+        min-height: 550px;
+    }
+
+    .container {
+        height: 100%;
     }
 
     &--search {
@@ -46,6 +51,10 @@
     &__inner {
         display: flex;
         position: relative;
+        height: 100%;
+        @include _768 {
+            height: auto;
+        }
     }
 
     &__main-img {
@@ -55,7 +64,8 @@
         z-index: 0;
         width: calc((100vw - 1200px) / 2 + 1200px - 183px);
         @include _768 {
-            height: 720px;
+            height: 100vh;
+            min-height: 550px;
             width: 100%;
         }
 
@@ -87,10 +97,11 @@
         }
 
         &-inner {
+            height: 100%;
             display: flex;
             flex-direction: column;
-            gap: 31px;
             align-items: center;
+            justify-content: space-between;
             @include _768 {
                 padding: 33px 0;
                 overflow-y: auto;
@@ -98,7 +109,13 @@
             }
 
             a {
+                display: inline-block;
+                margin-bottom: 32px;
                 transition: filter .15s;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
 
                 &:hover {
                     filter: grayscale(1);
