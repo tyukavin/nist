@@ -1,6 +1,6 @@
 .menu {
     display: none;
-    @include _768 {
+    @include _1160 {
         display: block;
         width: 100vw;
         background-color: #000;

@@ -52,6 +52,23 @@
         }
     }
 
+    &__logo {
+        color: #fff;
+        margin-bottom: 70px;
+        display: inline-block;
+
+        img {
+            margin-bottom: 15px;
+        }
+
+        .translate {
+            display: block;
+            padding-right: 15px;
+            font-size: 24px;
+            text-align: right;
+        }
+    }
+
     &__action {
         .btn {
             @include _768 {
@@ -61,6 +78,21 @@
                 }
             }
         }
+    }
+}
+
+.leasing-hero--service {
+
+    .leasing-hero__inner {
+        padding-top: 200px;
+    }
+
+    .leasing-hero__title {
+        margin-bottom: 42px;
+    }
+
+    .leasing-hero__action .btn:first-child {
+        display: inline-block;
     }
 }
 

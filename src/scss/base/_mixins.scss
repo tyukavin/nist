@@ -81,3 +81,15 @@
         @content;
     }
 }
+
+@mixin _1160 {
+    @media (max-width: 1160px){
+        @content;
+    }
+}
+
+@mixin _1260 {
+    @media (max-width: 1260px){
+        @content;
+    }
+}

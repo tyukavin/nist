@@ -8,7 +8,7 @@
     left: 0;
     right: 0;
     z-index: 99;
-    @include _768 {
+    @include _1160 {
         background-color: transparent;
         height: auto;
         padding: 30px 0 0;
@@ -23,13 +23,13 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include _768 {
+        @include _1160 {
             justify-content: flex-end;
         }
     }
 
     &__nav {
-        @include _768 {
+        @include _1160 {
             display: none;
         }
 
@@ -68,7 +68,7 @@
         font-size: 18px;
         font-weight: 600;
         transition: color .15s ease;
-        @include _768 {
+        @include _1160 {
             display: none;
         }
 
@@ -78,7 +78,7 @@
     }
 
     .logo {
-        @include _768 {
+        @include _1160 {
             display: none;
         }
     }
@@ -89,7 +89,7 @@
         padding: 10px;
         margin-right: -10px;
 
-        @include _768 {
+        @include _1160 {
             display: block;
             z-index: 99;
         }
@@ -100,7 +100,7 @@
     }
 
     .btn-wiki {
-        @include _768 {
+        @include _1160 {
             display: none;
         }
     }
@@ -186,7 +186,7 @@ ul.inner-menu {
     position: relative;
     z-index: 5;
     transition: color .2s;
-    @include _768 {
+    @include _1160 {
         color: $color-primary;
     }
 
@@ -223,7 +223,7 @@ ul.inner-menu {
         padding: 5px 15px;
         font-size: 16px;
         min-width: 360px;
-        @include _768 {
+        @include _1160 {
             min-width: 75vw;
         }
 

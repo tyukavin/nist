@@ -80,9 +80,16 @@ p {
 
 .main {
     padding-top: 90px;
-    @include _768 {
+    @include _1160 {
         padding-top: 0;
     }
+}
+
+.link {
+    color: #4E4E4E;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 .checkbox {
@@ -295,6 +302,7 @@ p {
     &__img {
         flex: none;
         margin-right: 23px;
+        max-width: 398px;
         @include _768 {
             width: 60%;
             margin: 0 auto;
@@ -779,6 +787,24 @@ p {
             padding: 0 20px;
         }
     }
+
+    &--white {
+        color: #000;
+
+        .form__inner {
+            border: 2px solid $color-primary;
+            background: #fff;
+        }
+
+        .form__content input {
+            color: #000;
+            border-bottom-color: #000;
+
+            &::placeholder {
+                color: inherit;
+            }
+        }
+    }
 }
 
 .gallery {
@@ -1133,6 +1159,126 @@ p {
                 margin-bottom: 7px;
                 font-size: 16px;
             }
+        }
+    }
+}
+
+.card-special {
+    margin-bottom: 100px;
+
+    &__head {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        margin-bottom: 80px;
+        @include _768 {
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        p {
+            flex: 1;
+            padding-top: 130px;
+            @include _768 {
+                padding-top: 0;
+            }
+        }
+
+        img {
+            max-width: 320px;
+            @include _768 {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__cap {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 80px;
+        flex-wrap: wrap;
+        @include _768 {
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        &-img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15px;
+
+            .img-row {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+            }
+        }
+
+        &-content {
+            flex: 1 1;
+        }
+    }
+
+    &__problems {
+        margin-bottom: 80px;
+        @include _768 {
+            margin-bottom: 40px;
+        }
+
+        .highlight {
+            color: $color-primary;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            @include _768 {
+                font-size: 26px;
+            }
+        }
+
+        .problem-deck {
+            background-color: $color-primary;
+            background-image: url(../img/special/cutera-problem.png);
+            background-repeat: no-repeat;
+            background-position: 20px 0;
+            background-size: contain;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 18px;
+            padding: 45px 80px 45px 0;
+            display: flex;
+            gap: 40px;
+            justify-content: flex-end;
+            @include _768 {
+                background-image: none;
+                padding: 40px 20px;
+                flex-direction: column;
+            }
+
+            li {
+                margin-bottom: 18px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 36px;
+
+        &-content {
+            flex: 1 1;
+        }
+
+        .link {
+            color: #4E4E4E;
+            font-weight: 600;
+            text-decoration: underline;
         }
     }
 }
@@ -1964,6 +2110,12 @@ p {
     .filter-cynosure {
         order: 13;
     }
+    .filter-deka {
+        order: 14;
+    }
+    .filter-hironic {
+        order: 15;
+    }
 }
 
 .filter-badge {
@@ -2081,11 +2233,14 @@ p {
     }
 
     a {
+        color: $color-primary;
         text-decoration: underline;
     }
 }
 
 .card-article {
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 100px;
     max-width: 860px;
 }
