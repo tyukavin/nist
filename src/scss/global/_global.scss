@@ -27,6 +27,7 @@ body {
 	font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    line-height: normal;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -879,7 +880,7 @@ p {
 }
 
 .card-info {
-    padding-top: 15px;
+    padding-top: 10px;
     @include _768 {
         padding-top: 0;
     }
@@ -1088,7 +1089,6 @@ p {
 .card-subinfo {
     font-size: 14px;
     line-height: 17px;
-    margin-bottom: 40px;
     @include _768 {
         font-size: 12px;
         line-height: 14px;
@@ -1097,6 +1097,23 @@ p {
         br {
             display: none;
         }
+    }
+}
+
+.card-subinfo + .card-action {
+    margin-top: 40px;
+}
+
+.card-file {
+    margin: 20px 0 30px;
+
+    a {
+        display: flex;
+        align-items: center;
+        color: $color-primary;
+        gap: 12px;
+        font-size: 14px;
+        text-decoration: underline;
     }
 }
 

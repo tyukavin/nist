@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Wiki Главная | NistPro",
+"description":"Продажа и обслуживание оригинального косметологического оборудования.",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+    @@include('components/page-blocks/_header.html')
+
+    <main class="main">
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__logo">
+                    <img src="img/bread.svg" alt="logo" height="19" width="19">
+                </div>
+                <div class="breadcrumbs__content">
+                    <a href="/">Главная</a>/
+                    <span class="breadcrumbs__active">Wiki</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="wiki-main">
+            <img src="img/wiki/wiki-logo-main.svg" class="wiki-main__img" alt="Wiki Logo NIST">
+            <div class="wiki-main__inner">
+                <p>
+                    Компания NIST основана в 2012 году и специализируется на продаже косметологического оборудования.
+                    Качественное оборудование по доступным ценам с гарантией и сервисным обслуживанием- тогда вам к
+                    нам!
+                </p>
+                <form action="">
+                    <input type="text" class="input-wiki-search" placeholder="Поиск в WIKI">
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="wiki-main-tabs">
+                <a href="#" class="wiki-main-tabs__item">Новости</a>
+                <a href="#" class="wiki-main-tabs__item active">Технологии</a>
+                <a href="#" class="wiki-main-tabs__item">Процедуры</a>
+                <a href="#" class="wiki-main-tabs__item">Производители</a>
+            </div>
+
+            <div class="wiki-main-content">
+                <div class="wiki-preview">
+                    <div class="wiki-preview__content">
+                        <div class="wiki-preview__title">
+                            Популярные аппараты Candela для лазерной эпиляции
+                        </div>
+                        <p>
+                            Лазерное оборудование от американской компании Candela – это эталон лазерной эпиляции на мировом
+                            рынке косметологии и медицины. В 1998 году компания Candela получила разрешение FDA на
+                            использование александритового…
+                        </p>
+                        <a href="wiki-item.html" class="link">Подробнее</a>
+                    </div>
+                    <div class="wiki-preview__img">
+                        <img src="img/wiki/wiki-preview.jpeg" alt="">
+                    </div>
+                </div>
+
+                <div class="wiki-preview">
+                    <div class="wiki-preview__content">
+                        <div class="wiki-preview__title">
+                            Популярные аппараты Candela для лазерной эпиляции
+                        </div>
+                        <p>
+                            Лазерное оборудование от американской компании Candela – это эталон лазерной эпиляции на мировом
+                            рынке косметологии и медицины. В 1998 году компания Candela получила разрешение FDA на
+                            использование александритового…
+                        </p>
+                        <a href="wiki-item.html" class="link">Подробнее</a>
+                    </div>
+                    <div class="wiki-preview__img">
+                        <img src="img/wiki/wiki-preview.jpeg" alt="">
+                    </div>
+                </div>
+
+                <div class="wiki-preview">
+                    <div class="wiki-preview__content">
+                        <div class="wiki-preview__title">
+                            Популярные аппараты Candela для лазерной эпиляции
+                        </div>
+                        <p>
+                            Лазерное оборудование от американской компании Candela – это эталон лазерной эпиляции на мировом
+                            рынке косметологии и медицины. В 1998 году компания Candela получила разрешение FDA на
+                            использование александритового…
+                        </p>
+                        <a href="wiki-item.html" class="link">Подробнее</a>
+                    </div>
+                    <div class="wiki-preview__img">
+                        <img src="img/wiki/wiki-preview.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    @@include('components/page-blocks/_footer.html')
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
