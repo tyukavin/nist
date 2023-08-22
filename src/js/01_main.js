@@ -57,6 +57,36 @@ $(document).ready(function() {
         ]
     });
 
+    $('.js-effect-slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        focusOnSelect: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            },
+        ],
+        prevArrow: `<button class="prev-slide">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none">
+                    <path d="M20 2L2 14L20 26" stroke="#EA4033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>`,
+        nextArrow: `<button class="next-slide">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none">
+                    <path d="M2 2L20 14L2 26" stroke="#EA4033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>`,
+    });
+
     $(".slider-nav img").click(function() {
 
         $(".slider-nav img").removeClass("active");
@@ -340,5 +370,24 @@ $(document).ready(function() {
 
         event.preventDefault();
     });
+
+    (function() {
+        const btnBack = document.querySelector(".js-btn-back");
+
+        if (btnBack) {
+
+            btnBack.addEventListener("click", function() {
+
+                if (window.history.length > 1) {
+
+                    window.history.back();
+                }
+                else {
+
+                    window.location.href = "/wiki/";
+                }
+            });
+        }
+    })();
 
 });

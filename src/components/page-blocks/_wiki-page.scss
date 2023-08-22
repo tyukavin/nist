@@ -147,7 +147,7 @@
 
         img {
             object-fit: cover;
-            object-position: bottom;
+            object-position: top;
             height: 100%;
             width: 100%;
         }
@@ -163,9 +163,17 @@
         margin-top: 23px;
         display: flex;
         justify-content: space-between;
+        @include _768 {
+            flex-direction: column;
+        }
 
         h1 {
             margin-right: 50px;
+            @include _768 {
+                margin-right: 0;
+                margin-bottom: 20px;
+                font-size: 28px;
+            }
         }
     }
 }
@@ -175,6 +183,9 @@
     position: relative;
     margin-top: -55px;
     width: 100%;
+    @include _768 {
+        margin-bottom: 30px;
+    }
 
     img {
         object-fit: cover;
@@ -194,6 +205,9 @@
             font-size: 20px;
             font-weight: 500;
             margin-top: 0;
+            @include _768 {
+                font-size: 18px;
+            }
         }
     }
 
@@ -234,6 +248,9 @@
 
 .wiki-text {
     margin-bottom: 80px;
+    @include _768 {
+        margin-bottom: 50px;
+    }
 
     ul, ol, p {
         margin-bottom: 20px;
@@ -255,11 +272,18 @@
 
 .wiki-related {
     margin-bottom: 180px;
+    @include _768 {
+        margin-bottom: 80px;
+    }
 
     &__inner {
         gap: 20px;
         display: flex;
         margin-bottom: 50px;
+        @include _768 {
+            flex-direction: column;
+            gap: 40px;
+        }
     }
 
     h2 {
@@ -303,6 +327,9 @@
 .wiki-related-main {
     display: flex;
     gap: 20px;
+    @include _768 {
+        flex-direction: column;
+    }
 
     &__img {
         border-radius: 20px;
@@ -310,6 +337,9 @@
         aspect-ratio: 3/2;
         flex: none;
         width: 50%;
+        @include _768 {
+            width: 100%;
+        }
 
         // img {
         //     height: 100%;
@@ -325,9 +355,16 @@
         align-items: flex-start;
         gap: 18px;
         padding: 30px 0;
+        @include _768 {
+            padding: 0;
+        }
 
         .btn--primary {
             margin-top: auto;
+            @include _768 {
+                margin-top: 40px;
+                width: 100%;
+            }
         }
     }
 
@@ -339,6 +376,10 @@
     &__title {
         font-size: 34px;
         font-weight: 700;
+        @include _768 {
+            font-size: 20px;
+            font-weight: 500;
+        }
     }
 }
 
@@ -374,6 +415,10 @@
         justify-content: center;
         gap: 50px;
         margin-bottom: 100px;
+        @include _768 {
+            gap: 25px;
+            margin-bottom: 60px;
+        }
     }
 
     a:hover {
@@ -382,11 +427,13 @@
 }
 
 .btn-back {
-    color: #fff;
     background-color: transparent;
-    padding: 9px 25px;
-    min-width: 0;
     border: 1px solid;
+    color: #fff;
+    padding: 9px 25px;
+    position: relative;
+    min-width: 0;
+    z-index: 100;
 
     &:hover {
         background-color: #fff;

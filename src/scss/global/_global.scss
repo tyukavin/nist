@@ -79,6 +79,17 @@ p {
     }
 }
 
+ul, ol {
+    padding-left: 20px;
+    line-height: normal;
+    font-size: 18px;
+    margin-bottom: 20px;
+    @include _768 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
 .main {
     padding-top: 90px;
     @include _1160 {
@@ -131,8 +142,10 @@ p {
             padding-left: 22px;
         }
 
-        &:hover {
-            color: $color-primary-hover;
+        @media (hover: hover) {
+            &:hover {
+                color: $color-primary-hover;
+            }
         }
 
         &::before,
@@ -791,19 +804,43 @@ p {
 
     &--white {
         color: #000;
+        margin-bottom: 0;
 
-        .form__inner {
-            border: 2px solid $color-primary;
-            background: #fff;
+        .form__head {
+            align-items: flex-start;
+            margin-bottom: 25px;
+
+            &-desc {
+                text-align: left;
+            }
         }
 
-        .form__content input {
-            color: #000;
-            border-bottom-color: #000;
+        .form__inner {
+            background: #fff;
+            padding: 0;
+        }
 
-            &::placeholder {
-                color: inherit;
+        .form__content {
+            padding: 0;
+            flex-wrap: wrap;
+
+            input {
+                color: #000;
+                border-bottom-color: #000;
+                flex: 0 0 48%;
+
+                &::placeholder {
+                    color: inherit;
+                }
             }
+
+            .btn {
+                flex: 1 1 100%;
+            }
+        }
+
+        .form__footer {
+            padding: 0;
         }
     }
 }
@@ -1171,6 +1208,7 @@ p {
             font-size: 18px;
             line-height: 21px;
             padding-left: 20px;
+            margin-bottom: 0;
 
             li {
                 margin-bottom: 7px;
@@ -1180,8 +1218,71 @@ p {
     }
 }
 
+.card-special-form {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 100px;
+
+    img {
+        flex: none;
+    }
+}
+
+.card-effect {
+    margin-bottom: 100px;
+
+    h2 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.effect-slider {
+    position: relative;
+
+    .prev-slide,
+    .next-slide {
+        position: absolute;
+        top: 50%;
+        appearance: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transform: translateY(-50%);
+    }
+
+    .prev-slide {
+        left: 0;
+    }
+
+    .next-slide {
+        right: 0;
+    }
+}
+
+.effect-slider-item {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+
+    &__caption {
+        color: #fff;
+        font-weight: 500;
+        background-color: $color-primary;
+        padding: 10px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
 .card-special {
     margin-bottom: 100px;
+
+    h2 {
+        margin-bottom: 25px;
+    }
 
     &__head {
         display: flex;
@@ -1273,6 +1374,11 @@ p {
                 flex-direction: column;
             }
 
+            ul {
+                columns: 2;
+                margin-bottom: 0;
+            }
+
             li {
                 margin-bottom: 18px;
 
@@ -1296,6 +1402,14 @@ p {
             color: #4E4E4E;
             font-weight: 600;
             text-decoration: underline;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
 }
@@ -1591,7 +1705,8 @@ p {
 }
 
 .catalog-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     flex-wrap: wrap;
     margin-bottom: 0 !important;
@@ -1634,7 +1749,8 @@ p {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    width: 284px;
+    // flex: 1 1 calc(100% / 4);
+    // min-width: 260px;
     transition: border-color .15s;
     @include _768 {
         display: flex;
@@ -2132,6 +2248,9 @@ p {
     }
     .filter-hironic {
         order: 15;
+    }
+    .filter-endymed {
+        order: 16;
     }
 }
 

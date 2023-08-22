@@ -830,6 +830,7 @@
         ul {
             font-size: 18px;
             font-weight: 500;
+            margin-bottom: 0;
             @include _768 {
                 font-size: 16px;
                 font-weight: 400;
@@ -880,6 +881,7 @@
             font-size: 16px;
             font-weight: 500;
             padding-left: 21px;
+            margin-bottom: 0;
 
             li {
                 margin-bottom: 12px;
