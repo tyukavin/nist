@@ -1,8 +1,8 @@
 .footer {
     background-color: #000;
     color: #fff;
-    padding: 42px 0 56px;
-    
+    padding: 45px 0 50px;
+
     a {
         color: inherit;
 
@@ -14,7 +14,9 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         @include _768 {
+            align-items: baseline;
             flex-direction: column;
         }
     }
@@ -47,9 +49,13 @@
         &-list {
             display: flex;
             gap: 67px;
-            @include _768 {
+            max-width: 375px;
+            justify-content: space-between;
+            @include _1260 {
                 flex-direction: column;
                 gap: 18px;
+            }
+            @include _768 {
                 margin-bottom: 32px;
             }
         }

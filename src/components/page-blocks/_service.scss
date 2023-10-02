@@ -156,6 +156,9 @@
 
     &__img {
         flex: none;
+        @include _1260 {
+            width: 50%;
+        }
 
         img {
             object-fit: cover;
@@ -209,6 +212,9 @@
     &__inner {
         display: flex;
         justify-content: space-between;
+        @include _1260 {
+            gap: 20px;
+        }
         @include _768 {
             flex-direction: column;
             gap: 35px;
@@ -218,8 +224,10 @@
     &__item {
         padding-right: 50px;
         width: 50%;
-        @include _768 {
+        @include _1260 {
             padding-right: 0;
+        }
+        @include _768 {
             width: 100%;
         }
 
@@ -242,11 +250,17 @@
             font-weight: 700;
             margin-right: 20px;
             line-height: 60px;
+            @include _1260 {
+                font-size: 56px;
+            }
         }
 
         .text {
             font-size: 34px;
             font-weight: 700;
+            @include _1260 {
+                font-size: 28px;
+            }
             @include _768 {
                 font-size: 24px;
                 font-weight: 600;
@@ -400,6 +414,7 @@
 
     &__inner {
         display: flex;
+        width: 100%;
         @include _768 {
             flex-direction: column;
         }
@@ -411,6 +426,7 @@
         margin-right: 75px;
         @include _1260 {
             max-width: none;
+            margin-right: 20px;
             flex: 1 1;
         }
         @include _768 {
@@ -446,6 +462,9 @@
 
     &__slider {
         position: relative;
+        @include _1260 {
+            width: 50%;
+        }
 
         .btn-control {
             position: absolute;
@@ -470,6 +489,10 @@
     margin: 0 40px;
     margin-bottom: 20px;
     width: 387px;
+    @include _1260 {
+        margin: 0 20px 20px;
+        width: calc(100% - 40px);
+    }
     @include _768 {
         width: 100%;
         margin: 0;
@@ -479,6 +502,10 @@
 .slider-license-nav {
     margin: 0 40px;
     width: 387px;
+    @include _1260 {
+        margin: 0;
+        width: 100%;
+    }
     @include _768 {
         display: none;
     }
@@ -543,10 +570,10 @@
     &__content {
         margin-bottom: 30px;
         display: flex;
-        gap: 61.5px;
+        justify-content: space-between;
         position: relative;
         @include _1260 {
-            justify-content: space-between;
+
         }
         @include _768 {
             flex-direction: column;
@@ -585,12 +612,12 @@
             font-size: 18px;
             font-weight: 600;
             @include _1260 {
+                font-size: 14px;
                 height: 120px;
                 width: 120px;
             }
             @include _768 {
                 margin: 0 auto;
-                font-size: 14px;
             }
         }
 
@@ -666,6 +693,7 @@
         @include _1260 {
             margin-left: 0;
             padding: 30px 25px;
+            flex: 1 0 50%;
         }
 
         h2 {
@@ -698,9 +726,11 @@
     &__inner {
         display: flex;
         gap: 64px;
+        @include _1260 {
+            gap: 25px;
+        }
         @include _768 {
             flex-direction: column;
-            gap: 25px;
         }
     }
 
@@ -712,6 +742,12 @@
 
         h2 {
             margin-bottom: 42px;
+            @include _1260 {
+                font-size: 30px;
+            }
+            @include _768 {
+                font-size: 24px;
+            }
 
             .color {
                 color: $color-primary;

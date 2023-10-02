@@ -170,12 +170,15 @@
         padding-right: 63px;
         padding-left: calc((100vw - 1215px) / 2);
         margin-left: calc((100vw - 1215px) / -2);
-        @include _768 {
+        @include _1260 {
             margin-left: 0;
+            padding: 20px 25px 50px;
+            font-size: 28px;
+        }
+        @include _768 {
             order: 2;
             font-size: 24px;
             line-height: 29px;
-            padding: 20px 25px 50px;
 
             strong {
                 font-size: 44px;
@@ -190,8 +193,17 @@
 
     &__img {
         flex: none;
+        @include _1260 {
+            width: 50%;
+        }
         @include _768 {
             order: 1;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }

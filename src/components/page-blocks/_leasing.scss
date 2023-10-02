@@ -223,6 +223,9 @@
 .leasing-stages {
     margin-bottom: 100px;
     display: flex;
+    @include _1260 {
+        justify-content: space-between;
+    }
     @include _768 {
         margin-bottom: 50px;
         flex-direction: column;
@@ -231,6 +234,9 @@
     h2 {
         flex: none;
         margin-right: 120px;
+        @include _1260 {
+            margin-right: 40px;
+        }
         @include _768 {
             margin-right: 0;
             margin-bottom: 30px;
@@ -305,6 +311,9 @@
 .leasing-partner {
     display: flex;
     margin-bottom: 100px;
+    @include _1260 {
+        flex-direction: column;
+    }
     @include _768 {
         margin-bottom: 50px;
         flex-direction: column;
@@ -313,9 +322,9 @@
     h2 {
         flex: none;
         margin-right: 109px;
-        @include _768 {
-            margin-right: 0;
+        @include _1260 {
             margin-bottom: 30px;
+            margin-right: 0;
         }
     }
 
@@ -331,6 +340,9 @@
     .list-partner {
         display: flex;
         gap: 20px;
+        @include _1260 {
+            justify-content: space-between;
+        }
         @include _768 {
             flex-wrap: wrap;
         }
@@ -342,6 +354,9 @@
             justify-content: center;
             text-align: center;
             width: 25%;
+            @include _1260 {
+                width: 17%;
+            }
             @include _768 {
                 width: 47%;
             }
@@ -353,6 +368,10 @@
             span {
                 margin-top: 30px;
                 font-size: 18px;
+                @include _1260 {
+                    font-size: 16px;
+                    white-space: nowrap;
+                }
                 @include _768 {
                     font-size: 14px;
                 }
