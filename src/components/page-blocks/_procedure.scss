@@ -1,0 +1,193 @@
+.procedure {
+    margin-bottom: 100px;
+    @include _768 {
+        margin-bottom: 40px;
+    }
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 25px;
+        @include _768 {
+            gap: 18px;
+            padding: 0 15px 10px;
+            margin: 0 -15px;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            overflow-x: scroll;
+        }
+    }
+
+    h2 {
+        margin-bottom: 40px;
+    }
+}
+
+.procedure-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 30%;
+    @include _768 {
+        gap: 20px;
+        flex-direction: row;
+        width: auto;
+    }
+}
+
+.procedure-row {
+    display: flex;
+    gap: 25px;
+    @include _768 {
+        gap: 20px;
+    }
+
+    &--middle {
+
+        .procedure-item:not(.procedure-item--main) {
+            height: 350px;
+            width: 20%;
+            @include _768 {
+                height: auto;
+                width: 280px;
+            }
+        }
+
+        .procedure-item--main {
+            width: 60%;
+            @include _768 {
+                width: 280px;
+            }
+        }
+    }
+
+    &--footer {
+
+        .procedure-item {
+            width: 50%;
+            @include _768 {
+                width: 280px;
+            }
+        }
+
+        .procedure-name {
+            font-size: 35px;
+            @include _768 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+.procedure-name {
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: left;
+
+    span {
+        color: $color-primary;
+        display: block;
+    }
+
+    &--main {
+        color: #fff;
+        font-size: 36px;
+        font-weight: 600;
+        text-align: left;
+        @include _768 {
+            font-size: 18px;
+        }
+    }
+}
+
+.procedure-item {
+    background-color: #EFEFEF;
+    border-radius: 6px;
+    padding: 35px 32px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    transition: box-shadow .2s, transform .2s;
+    @include _768 {
+        height: 200px;
+        width: 280px;
+        padding: 25px 20px;
+    }
+
+    &:hover {
+        box-shadow: 0 5px 15px -5px #777;
+        transform: translateY(-10px);
+    }
+
+    &--main {
+        background-color: $color-primary;
+        padding: 80px 50px;
+        width: 70%;
+        height: auto;
+        @include _768 {
+            height: 200px;
+            width: 280px;
+            padding: 25px 20px;
+        }
+
+        &:hover {
+            box-shadow: 0 6px 15px 2px #777;
+            transform: translateY(-7px);
+        }
+    }
+
+    &__img {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        &.laser {
+            top: 35px;
+            @include _768 {
+                width: 55%;
+            }
+        }
+
+        &.antiage {
+            top: 10px;
+        }
+
+        &.relef {
+            top: 60px;
+            @include _768 {
+                top: 10px;
+                width: 70%;
+            }
+        }
+
+        &.tone {
+            top: 10px;
+            @include _768 {
+                width: 80%;
+            }
+        }
+
+        &.sosud {
+            top: 20px;
+        }
+
+        &.forbody {
+            top: 70px;
+            @include _768 {
+                top: 10px;
+            }
+        }
+
+        &.podtaysh {
+            top: 30px;
+        }
+
+        &.tatoo {
+            top: 32px;
+        }
+    }
+}
