@@ -2377,6 +2377,13 @@ ul, ol {
     max-width: 860px;
 }
 
+.table-wrap {
+    @include _768 {
+        overflow-y: auto;
+        width: 100%;
+    }
+}
+
 @keyframes image1 {
     0% {
         transform: scale(1);
