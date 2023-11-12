@@ -78,7 +78,7 @@
     }
 
     &__aside {
-        padding: 33px 33px 33px 0;
+        padding: 15px 33px 15px 0;
         width: 175px;
         @include _768 {
             background-color: #fff;
@@ -110,8 +110,11 @@
 
             a {
                 display: inline-block;
-                margin-bottom: 32px;
+                margin-bottom: 12px;
                 transition: filter .15s;
+                @include _768 {
+                    margin-bottom: 30px;
+                }
 
                 &:last-of-type {
                     margin-bottom: 0;
@@ -205,5 +208,34 @@
         @include _768 {
             display: flex;
         }
+    }
+}
+
+.hero-info {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #585858;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+    padding: 20px;
+    text-transform: uppercase;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: .4s linear;
+    @include _768 {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    &.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: none;
     }
 }

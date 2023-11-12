@@ -25,6 +25,7 @@
         justify-content: space-between;
         @include _1160 {
             justify-content: flex-end;
+            opacity: .85;
         }
     }
 
@@ -75,6 +76,17 @@
 
         &:hover {
             color: $color-primary;
+        }
+    }
+
+    &__mobile {
+        display: none;
+        @include _1160 {
+            display: block;
+            color: #ea4033;
+            font-size: 16px;
+            font-weight: 500;
+            margin-right: 20px;
         }
     }
 
@@ -134,7 +146,7 @@ ul.inner-menu {
 
     & > li {
         display: block;
-        line-height: 40px;
+        line-height: 36px;
 
         a {
             font-size: 16px;
@@ -172,8 +184,12 @@ ul.inner-menu {
     }
 }
 
-.invert .btn-search {
-    color: #fff
+.invert {
+
+    .header__mobile,
+    .btn-search {
+        color: #fff
+    }
 }
 
 .btn-search {

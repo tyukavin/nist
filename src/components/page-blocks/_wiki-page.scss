@@ -28,7 +28,6 @@
             font-size: 20px;
             font-weight: 500;
             line-height: normal;
-            width: 55%;
             @include _768 {
                 font-size: 16px;
                 font-weight: 400;
@@ -89,6 +88,16 @@
 
 .wiki-main-content {
     margin-bottom: 100px;
+    flex-wrap: wrap;
+    row-gap: 40px !important;
+
+    .wiki-item {
+        flex: 1 1 30% !important;
+        max-width: 33%;
+        @include _768 {
+            max-width: none;
+        }
+    }
 }
 
 .wiki-preview {

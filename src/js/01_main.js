@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+    const heroBanner = document.querySelector(".hero-info");
+
+    setTimeout(function() {
+        heroBanner.classList.add("visible");
+
+        setTimeout(function() {
+            heroBanner.classList.remove("visible");
+        }, 6000);
+    }, 800);
+
     let isMobile = false;
 
     if(window.matchMedia("(max-width: 767px)").matches){
@@ -41,7 +51,7 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        focusOnSelect: true,
+        // focusOnSelect: true,
         autoplay: true,
         autoplaySpeed: 2000,
         responsive: [
@@ -68,23 +78,14 @@ $(document).ready(function() {
             {
                 breakpoint: 768,
                 settings: {
-                    arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
+                    centerPadding: "0",
+                    slidesToShow: 1,
                 }
             },
         ],
-        prevArrow: `<button class="prev-slide">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none">
-                    <path d="M20 2L2 14L20 26" stroke="#EA4033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>`,
-        nextArrow: `<button class="next-slide">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none">
-                    <path d="M2 2L20 14L2 26" stroke="#EA4033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>`,
+        prevArrow: '<button class="prev-slide"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none"><path d="M20 2L2 14L20 26" stroke="#EA4033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
+        nextArrow: '<button class="next-slide"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none"><path d="M2 2L20 14L2 26" stroke="#EA4033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
     });
 
     $(".slider-nav img").click(function() {
