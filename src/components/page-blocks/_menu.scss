@@ -21,12 +21,11 @@
         }
 
         &__inner {
-            padding-top: 6vh;
-            padding-bottom: 6vh;
+            padding: 6vh 40px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-start;
+            justify-content: space-between;
             height: 100%;
             overflow: auto;
         }
@@ -52,8 +51,8 @@
             }
 
             li {
-                text-align: center;
-                margin-bottom: 21px;
+                text-align: left;
+                margin-bottom: 20px;
             }
 
             a {
@@ -61,6 +60,22 @@
                 font-size: 18px;
                 font-weight: 500;
             }
+        }
+
+        &__subnav {
+            margin-top: 20px !important;
+            display: none;
+
+            a {
+                font-size: 16px;
+                padding-left: 20px;
+            }
+        }
+
+        &__row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
         }
 
         .btn-wiki {

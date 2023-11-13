@@ -2,13 +2,15 @@ $(document).ready(function() {
 
     const heroBanner = document.querySelector(".hero-info");
 
-    setTimeout(function() {
-        heroBanner.classList.add("visible");
-
+    if (heroBanner) {
         setTimeout(function() {
-            heroBanner.classList.remove("visible");
-        }, 6000);
-    }, 800);
+            heroBanner.classList.add("visible");
+
+            setTimeout(function() {
+                heroBanner.classList.remove("visible");
+            }, 6000);
+        }, 800);
+    }
 
     let isMobile = false;
 
@@ -45,6 +47,25 @@ $(document).ready(function() {
             ],
         },
         dragToClose: false
+    });
+
+    $('.procedure-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow: '.js-procedure-prev',
+        nextArrow: '.js-procedure-next',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    centerMode: false,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            },
+        ]
     });
 
     $('.js-trust-slider').slick({
@@ -225,6 +246,11 @@ $(document).ready(function() {
         $(this).find('span').text(
             $(this).find('span').text() == 'Подробнее' ? 'Скрыть' : 'Подробнее'
         );
+    });
+
+    $('.js-submenu').click(function() {
+
+        $(this).parent().parent().find('.menu__subnav').slideToggle();
     });
 
     $('.filter-section__head').click(function() {

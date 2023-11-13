@@ -295,9 +295,23 @@
         <nav class="menu__nav">
             <ul>
                 <li><a href="/">Главная</a></li>
-                <li><a href="catalog.html">Оборудование</a></li>
+                <li>
+                    <a href="catalog.html">Оборудование</a>
+                </li>
                 <li><a href="leasing.html">Лизинг</a></li>
-                <li><a href="service.html">Сервисный центр</a></li>
+                <li>
+                    <div class="menu__row">
+                        <a href="service.html">Сервисный центр</a>
+                        <button class="btn-control btn-control--down js-submenu">
+                            <img src="img/arrow-down.svg" loading="lazy" alt="arrow" width="12" height="6">
+                        </button>
+                    </div>
+                    <ul class="menu__subnav">
+                        <li><a href="#">Лизинг</a></li>
+                        <li><a href="#">Лизинг</a></li>
+                        <li><a href="#">Лизинг</a></li>
+                    </ul>
+                </li>
                 <li><a href="about.html">О нас</a></li>
             </ul>
         </nav>
