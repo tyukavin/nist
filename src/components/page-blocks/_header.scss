@@ -1,7 +1,5 @@
 .header {
-    background-color: #000;
     color: #fff;
-    height: 90px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -11,7 +9,7 @@
     @include _1160 {
         background-color: rgba(255, 255, 255, 0.1);
         height: auto;
-        padding: 15px 0;
+        padding: 10px 0;
         backdrop-filter: blur(3px);
     }
 
@@ -20,11 +18,61 @@
     }
 
     &__inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        height: 62px;
+        background-color: #000;
         @include _1160 {
-            justify-content: flex-end;
+            display: none;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include _1160 {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    &__contacts {
+        background-color: #fff;
+        padding: 11px 0;
+        @include _1160 {
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            @include _1160 {
+                justify-content: flex-end;
+            }
+        }
+
+        &-left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            @include _1160 {
+                display: none;
+            }
+
+            a {
+                color: #000;
+                font-size: 18px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
     }
 
@@ -41,7 +89,7 @@
 
             li {
                 margin-right: 26px;
-                line-height: 90px;
+                line-height: 62px;
 
                 &.active > a {
                     color: $color-primary;
@@ -64,7 +112,7 @@
     }
 
     &__phone {
-        color: #fff;
+        color: #000;
         text-decoration: none;
         font-size: 18px;
         font-weight: 600;
@@ -133,7 +181,7 @@
 ul.inner-menu {
     position: absolute;
     display: block;
-    top: 90px;
+    top: 62px;
     left: -20px;
     background-color: #000;
     padding: 10px 20px;
@@ -153,11 +201,42 @@ ul.inner-menu {
     }
 }
 
+.header-social {
+    color: #EA4033;
+    padding: 8px;
+    line-height: 1;
+    transition: .2s;
+    @include _1160 {
+        display: none;
+    }
+
+    &:hover {
+        color: #000;
+    }
+
+    svg {
+        fill: currentColor;
+    }
+}
+
+.btn-callme {
+    color: #000;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #EA4033;
+    font-size: 16px;
+    padding: 10px 24px;
+    line-height: 1;
+    @include _1160 {
+        display: none;
+    }
+}
+
 .btn-wiki {
     background-color: #ea4033;
     border-radius: 10px;
     cursor: pointer;
-    height: 60px;
+    height: 34px;
     width: 90px;
     display: flex;
     align-items: center;
@@ -193,7 +272,7 @@ ul.inner-menu {
 
 .btn-search {
     @include no-btn();
-    color: #fff;
+    color: $color-primary;
     background-color: transparent;
     padding: 10px;
     height: 40px;
@@ -211,7 +290,7 @@ ul.inner-menu {
     }
 
     &:hover {
-        color: $color-primary;
+        color: #000;
     }
 
     svg {
