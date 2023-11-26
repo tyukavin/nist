@@ -895,15 +895,27 @@
         margin-bottom: 50px;
     }
 
+    img {
+        object-fit: cover;
+        object-position: top;
+        max-height: 100%;
+        flex: 1;
+        max-width: 40%;
+    }
+
     &__content {
         color: #fff;
         background-color: #000;
         flex: 1;
-        padding-top: 20px;
-        padding-bottom: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
         padding-left: 20px;
         padding-right: calc((100vw - 1200px)/ 2);
         margin-right: calc((100vw - 1220px)/ -2);
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         @include _768 {
             padding-top: 20px;
             padding-bottom: 20px;
@@ -915,7 +927,7 @@
 
         h2 {
             color: $color-primary;
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
 
         ul {
@@ -1018,6 +1030,7 @@
     margin-bottom: 100px;
     display: flex;
     gap: 50px;
+    align-items: center;
     @include _768 {
         margin-bottom: 50px;
         flex-direction: column;

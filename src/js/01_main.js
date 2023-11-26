@@ -313,6 +313,12 @@ $(document).ready(function() {
         $('html').toggleClass('no-scroll');
     });
 
+    $('.wiki-main-tabs__item label, .wiki-main-tabs__item button').on('click', function() {
+
+        $('.wiki-main-tabs__item').removeClass('active');
+        $(this).parent().addClass('active');
+    });
+
     $('.btn-collapse').click(function() {
 
         $(this).text(

@@ -4,6 +4,8 @@
     margin-bottom: 100px;
     @include _768 {
         margin-bottom: 50px;
+        min-height: 100vh;
+        height: 100vh;
     }
 
     &__img {
@@ -35,8 +37,8 @@
         text-transform: uppercase;
         width: 80%;
         @include _768 {
-            font-size: 30px;
-            line-height: 36px;
+            font-size: 26px;
+            line-height: 30px;
             text-transform: none;
             margin-bottom: 12px;
             width: 100%;
@@ -88,7 +90,9 @@
 .leasing-hero--service {
 
     .leasing-hero__inner {
-        padding-top: 200px;
+        padding: 60px 0 40px;
+        flex: 1;
+        width: 100%;
     }
 
     .leasing-hero__title {
@@ -97,6 +101,15 @@
 
     .leasing-hero__action .btn:first-child {
         display: inline-block;
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        @include _768 {
+            align-items: flex-end;
+        }
     }
 }
 
