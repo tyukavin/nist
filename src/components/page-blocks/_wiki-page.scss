@@ -202,6 +202,9 @@
     color: #fff;
     background-color: $color-primary;
     padding: 35px 0 90px;
+    @include _768 {
+        padding: 90px 0;
+    }
 
     &__inner {
         margin-top: 23px;
@@ -239,11 +242,12 @@
 }
 
 .wiki-article-content {
-    margin-bottom: 30px;
+    margin-bottom: 80px;
+    @include _768 {
+        margin-bottom: 50px;
+    }
 
     p {
-        margin-top: 30px;
-        line-height: normal;
 
         &:first-child {
             font-size: 20px;
@@ -255,10 +259,10 @@
         }
     }
 
-    ul, ol {
+    ul, ol, p {
         font-size: 18px;
         line-height: normal;
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
     img {
@@ -282,45 +286,21 @@
 .wiki-banner {
     background-color: $color-primary;
     padding: 33px 50px;
-    margin-top: 80px;
+    margin-top: 50px;
     margin-bottom: 80px;
     @include _768 {
-        margin: 50px 0;
+        margin: 35px 0 50px;
     }
 
     img {
         margin: 0 auto;
-    }
-}
-
-.wiki-text {
-    margin-bottom: 80px;
-    @include _768 {
-        margin-bottom: 50px;
-    }
-
-    ul, ol, p {
-        margin-bottom: 20px;
-    }
-
-    ul, ol {
-        font-size: 18px;
-        line-height: normal;
-    }
-
-    img {
-        margin: 0 auto;
-    }
-
-    a {
-        color: #0000ff;
     }
 }
 
 .wiki-related {
-    margin-bottom: 180px;
+    margin-bottom: 100px;
     @include _768 {
-        margin-bottom: 80px;
+        margin-bottom: 60px;
     }
 
     &__inner {
@@ -461,10 +441,8 @@
     &--content {
         justify-content: center;
         gap: 50px;
-        margin-bottom: 100px;
         @include _768 {
             gap: 25px;
-            margin-bottom: 60px;
         }
     }
 
