@@ -266,7 +266,9 @@ ul.inner-menu {
 
     .header__mobile,
     .btn-search {
-        color: #fff
+        @include _1160 {
+            color: #fff;
+        }
     }
 }
 
