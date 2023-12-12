@@ -22,6 +22,15 @@ $(document).ready(function() {
         isMobile = false;
     }
 
+    $(document).snowfall({
+        flakeCount: 110,
+        minSize: 2,
+        maxSize: 8,
+        maxSpeed: 5,
+        round: true,
+        shadow: false,
+    });
+
     $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-99-99"});
 
     $(".slider-nav img:first-child").addClass("active");
@@ -340,6 +349,13 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $(`#${$(this).data("scroll")}`).offset().top - 100
         }, 1000);
+    });
+
+    $(".sale-promo").click(function() {
+
+        $('html, body').animate({
+            scrollTop: $(`#${$(this).data("scroll")}`).offset().top - 125
+        }, 800);
     });
 
     $(window).scroll(startCounter);

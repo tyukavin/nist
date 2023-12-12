@@ -1,6 +1,7 @@
 .hero {
     position: relative;
     height: 780px;
+    overflow: hidden;
     @include _768 {
         height: 100vh;
         min-height: 550px;
@@ -239,4 +240,51 @@
         visibility: visible;
         transform: none;
     }
+}
+
+.sale-promo {
+    @include no-btn();
+    appearance: none;
+    position: absolute;
+    right: -1%;
+    top: 5%;
+    @include _768 {
+        top: 70px;
+        right: 0;
+    }
+
+    img {
+        animation: anim-bell 1.3s ease infinite;
+        transform-origin: 50% 35%;
+        width: 120px;
+        @include _768 {
+            width: 60px;
+        }
+    }
+}
+
+.promo {
+    margin-top: 80px;
+    @include _768 {
+        margin-top: 50px;
+    }
+
+    &__inner {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        @include _768 {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}
+
+@keyframes anim-bell {
+    0%  { transform: rotateZ(0); }
+    10% { transform: rotateZ(-30deg); }
+    20% { transform: rotateZ(30deg); }
+    30% { transform: rotateZ(-30deg); }
+    40% { transform: rotateZ(0); }
 }
