@@ -990,6 +990,18 @@ ul, ol {
     }
 }
 
+.card-banner {
+    margin-bottom: 70px;
+    width: 100%;
+    @include _768 {
+        margin-bottom: 50px;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
 .card-slider {
     margin-right: 50px;
     display: flex;
