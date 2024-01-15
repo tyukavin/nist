@@ -1187,6 +1187,7 @@ ul, ol {
     }
 }
 
+.card-main-params,
 .card-params {
     padding: 0;
     list-style: none;
@@ -1199,6 +1200,20 @@ ul, ol {
 
     li {
         margin-bottom: 3px;
+    }
+}
+
+.card-main-params {
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        &.price {
+            font-size: 20px;
+            font-weight: 500;
+        }
     }
 }
 

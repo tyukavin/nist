@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+    "lang":"ru",
+    "title":"Корзина | NistPro",
+    "description":"Продажа и обслуживание оригинального косметологического оборудования. Доставка в регионы и лизинг. Лучшее оборудование от производителей ✓США ✓Израиля ✓Германии ☎️ +7 495 191-71-98 Nist.pro.",
+    "favicon":"img/favicons/favicon",
+})
+
+<body>
+    @@include('components/page-blocks/_header.html')
+
+    <main class="main">
+
+        <div class="container">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__logo">
+                    <img src="img/bread.svg" alt="logo" height="19" width="19">
+                </div>
+                <div class="breadcrumbs__content">
+                    <a href="/">Главная</a>/
+                    <span class="breadcrumbs__active">Корзина</span>
+                </div>
+            </div>
+
+            <h1 class="cart-title">Корзина</h1>
+
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Товар</th>
+                        <th>Количество</th>
+                        <th>Цена</th>
+                        <th>Итого</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <button class="cart-item-remove">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M1 1L7.5 7.5M14 14L7.5 7.5M7.5 7.5L14 1L1 14" stroke="#EA4033" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <a href="#" class="cart-item-name">
+                                <img src="img/cart/cart-item.png" alt="">
+                                <div>
+                                    <div>Laser safety glasses</div>
+                                    <div>Артикул: CGPS-001</div>
+                                </div>
+                            </a>
+                        </td>
+                        <td>2</td>
+                        <td>4500</td>
+                        <td>9000</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="cart-item-remove">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                                    <path d="M1 1L7.5 7.5M14 14L7.5 7.5M7.5 7.5L14 1L1 14" stroke="#EA4033" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </td>
+                        <td>
+                            <a href="#" class="cart-item-name">
+                                <img src="img/cart/cart-item.png" alt="">
+                                <div>
+                                    <div>Laser safety glasses</div>
+                                    <div>Артикул: CGPS-001</div>
+                                </div>
+                            </a>
+                        </td>
+                        <td>1</td>
+                        <td>4500</td>
+                        <td>4500</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="cart-result">Итого: 13500</div>
+
+            <div class="cart-promo">
+                <form action="">
+                    <input type="text" placeholder="Ввести промокод">
+                </form>
+            </div>
+
+            <div class="cart-actions">
+                <a href="order.html" class="btn btn--primary">Оформить заявку</a>
+                <a href="catalog.html" class="btn btn--primary-outline">Вернуться в каталог</a>
+            </div>
+
+            @@include('components/page-blocks/_wiki.html')
+        </div>
+
+    </main>
+
+    @@include('components/page-blocks/_footer.html')
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

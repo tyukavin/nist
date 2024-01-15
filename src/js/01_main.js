@@ -22,14 +22,14 @@ $(document).ready(function() {
         isMobile = false;
     }
 
-    $(document).snowfall({
-        flakeCount: 110,
-        minSize: 2,
-        maxSize: 8,
-        maxSpeed: 5,
-        round: true,
-        shadow: false,
-    });
+    // $(document).snowfall({
+    //     flakeCount: 110,
+    //     minSize: 2,
+    //     maxSize: 8,
+    //     maxSpeed: 5,
+    //     round: true,
+    //     shadow: false,
+    // });
 
     $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-99-99"});
 

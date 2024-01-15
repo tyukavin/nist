@@ -329,3 +329,29 @@ ul.inner-menu {
         }
     }
 }
+
+.header-inner-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-action {
+    position: relative;
+    line-height: 1;
+}
+
+.cart-count {
+    color: #fff;
+    background-color: $color-primary;
+    border-radius: 50%;
+    min-width: 12px;
+    line-height: 12px;
+    padding: 0 3px;
+    text-align: center;
+    font-size: 8px;
+    font-weight: 600;
+    position: absolute;
+    top: -12%;
+    right: -25%;
+}
