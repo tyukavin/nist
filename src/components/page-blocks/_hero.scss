@@ -242,27 +242,6 @@
     }
 }
 
-.sale-promo {
-    @include no-btn();
-    appearance: none;
-    position: absolute;
-    right: -1%;
-    top: 5%;
-    @include _768 {
-        top: 70px;
-        right: 0;
-    }
-
-    img {
-        animation: anim-bell 1.3s ease infinite;
-        transform-origin: 50% 35%;
-        width: 120px;
-        @include _768 {
-            width: 60px;
-        }
-    }
-}
-
 .promo {
     margin-top: 80px;
     @include _768 {
@@ -279,12 +258,4 @@
             gap: 30px;
         }
     }
-}
-
-@keyframes anim-bell {
-    0%  { transform: rotateZ(0); }
-    10% { transform: rotateZ(-30deg); }
-    20% { transform: rotateZ(30deg); }
-    30% { transform: rotateZ(-30deg); }
-    40% { transform: rotateZ(0); }
 }
