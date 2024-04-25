@@ -77,6 +77,25 @@ $(document).ready(function() {
         ]
     });
 
+    $('.education-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        prevArrow: '.js-education-prev',
+        nextArrow: '.js-education-next',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    centerMode: false,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            },
+        ]
+    });
+
     $('.js-trust-slider').slick({
         slidesToShow: 3,
         slidesToScroll: 1,

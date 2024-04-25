@@ -1,0 +1,247 @@
+.education-about {
+    margin: 100px 0;
+    display: flex;
+
+    & > div {
+        flex: 1 1 50%;
+
+        &:first-child {
+            padding-right: 20px;
+
+            p {
+                margin-bottom: 20px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.education-help {
+    margin: 100px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+
+        & > div:first-child {
+            width: 50%;
+        }
+    }
+
+    h2 {
+        color: $color-primary;
+
+        img {
+            margin: 15px 0;
+        }
+    }
+
+    .content {
+        background-color: $color-primary;
+        color: #fff;
+        flex: 1 1;
+        padding: 50px 35px;
+
+        padding-right: calc((100vw - 1200px) / 2);
+        margin-right: calc((100vw - 1220px) / -2);
+
+        li {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.education-steps {
+    margin: 100px 0;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 50px;
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+
+        li {
+            padding: 0 15px;
+            width: 25%;
+        }
+
+        img {
+            margin: 0 auto 5px;
+        }
+    }
+}
+
+.education-photo {
+    margin: 100px 0;
+
+    &__head {
+        position: relative;
+        margin-bottom: 30px;
+
+        h2 {
+            text-align: center;
+        }
+
+        .slider-actions {
+            position: absolute;
+            top: 10px;
+            right: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    .education-slider {
+        margin: 0 -10px;
+
+        img {
+            margin: 0 10px;
+        }
+    }
+}
+
+.education-features {
+    margin: 100px 0;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        & > div {
+            width: 50%;
+
+            &:first-child {
+                margin-left: calc((100vw - 1200px) / -2);
+                flex: 1 1;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    h2 {
+        color: $color-primary;
+        margin-bottom: 15px;
+    }
+
+    h3 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.education-video {
+    margin: 100px 0;
+
+    .content {
+        margin-bottom: 20px;
+        display: flex;
+        gap: 20px;
+
+        p {
+            width: 50%;
+        }
+    }
+}
+
+.education-format {
+    margin: 100px 0;
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    h4 {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+
+    .format-row {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 24px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.education-teachers {
+    margin: 100px 0;
+
+    h2 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.teacher-item {
+    flex: 1;
+    position: relative;
+
+    &:hover .overlay {
+        opacity: 1;
+    }
+
+    .overlay {
+        color: #fff;
+        background-color: rgba(234, 64, 51, 0.78);
+        background-image: url(../img/education/link.png);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: calc(100% - 25px) 25px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .2s;
+
+        h4 {
+            font-size: 20px;
+            margin-top: auto;
+            margin-bottom: 12px;
+        }
+    }
+}
+
+.light {
+    color: #EA4033;
+}

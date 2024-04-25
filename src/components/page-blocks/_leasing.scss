@@ -23,6 +23,12 @@
         }
     }
 
+    .education-img {
+        img {
+            object-position: center;
+        }
+    }
+
     &__inner {
         position: relative;
         padding-top: 230px;
