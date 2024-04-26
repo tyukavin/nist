@@ -23,12 +23,6 @@
         }
     }
 
-    .education-img {
-        img {
-            object-position: center;
-        }
-    }
-
     &__inner {
         position: relative;
         padding-top: 230px;
@@ -88,6 +82,22 @@
                 &:first-child {
                     display: none;
                 }
+            }
+        }
+    }
+}
+
+.education-hero {
+    .leasing-hero__img {
+        img {
+            object-position: center;
+        }
+    }
+
+    .leasing-hero__action {
+        .btn:first-child {
+            @include _768 {
+                display: block;
             }
         }
     }
