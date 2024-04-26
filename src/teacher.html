@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Учитель | NistPro",
+"description":"Продажа и обслуживание оригинального косметологического оборудования. Доставка в регионы и лизинг",
+"favicon":"img/favicons/favicon",
+})
+
+<body>
+    @@include('components/page-blocks/_header.html', { "invert": "invert" })
+
+    <main class="main">
+
+        <div class="container">
+            <div class="teacher-back">
+                <a href="education.html">Назад</a>
+            </div>
+
+            <div class="teacher-head">
+                <img src="img/education/teacher-main.jpg" alt="">
+
+                <div>
+                    <h1>Карташева<br>Марина Сергеевна</h1>
+                    <p>
+                        Практикующий врач и эксперт в области лечебной косметологии. Она также является практикующим и
+                        обучающим врачом-дерматокосметологом, обладающим дипломированным статусом как в инъекционной,
+                        так и аппаратной косметологии.
+                    </p>
+                </div>
+            </div>
+
+            <div class="teacher-content">
+                <div>
+                    <h3>Высшее образование:</h3>
+                    <p>
+                        2010 — Рязанский государственный медицинский университет им. ак. И.П. Павлова, врач
+                    </p>
+                    <p>
+                        2012 — Российский национальный исследовательский медицинский университет им. Н.И. Пирогова, дерматовенерология
+                    </p>
+                </div>
+                <div>
+                    <h3>Повышение квалификации:</h3>
+                    <p>2014 — РУДН, косметология</p>
+                    <p>2017 — ФГБОУ ДПО Институт повышения квалификации ФМБА, дерматовенерология</p>
+                    <p>2019 — ФГБОУ ДПО Институт повышения квалификации ФМБА, косметология</p>
+                    <p>2015 — применение ботулинического протеина типа А в косметологической практике</p>
+                </div>
+            </div>
+        </div>
+
+        @@include('components/page-blocks/_contacts.html')
+    </main>
+
+    @@include('components/page-blocks/_footer.html')
+    @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
