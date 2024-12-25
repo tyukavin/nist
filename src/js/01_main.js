@@ -22,15 +22,6 @@ $(document).ready(function() {
         isMobile = false;
     }
 
-    // $(document).snowfall({
-    //     flakeCount: 110,
-    //     minSize: 2,
-    //     maxSize: 8,
-    //     maxSpeed: 5,
-    //     round: true,
-    //     shadow: false,
-    // });
-
     $('input[type="tel"]').inputmask({"mask": "+7 (999) 999-99-99"});
 
     $(".slider-nav img:first-child").addClass("active");
@@ -136,6 +127,45 @@ $(document).ready(function() {
         prevArrow: '<button class="prev-slide"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none"><path d="M20 2L2 14L20 26" stroke="#EA4033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
         nextArrow: '<button class="next-slide"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none"><path d="M2 2L20 14L2 26" stroke="#EA4033" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>',
     });
+
+    (function() {
+
+        const iframe = document.createElement("iframe");
+
+        iframe.id = "map-iframe";
+        iframe.width = "100%";
+        iframe.height = "100%";
+        iframe.border = 0;
+
+        iframe.src = "https://yandex.ru/map-widget/v1/?z=12&ol=biz&oid=241002687570&scroll=false";
+
+        $("#contact-map").mouseenter(function() {
+            const iframeMap = document.getElementById("map-iframe");
+
+            if (iframeMap) return false;
+            $("#contact-map").append(iframe);
+        });
+    })();
+
+    (function() {
+
+        const scriptMap = document.createElement("script");
+        let radio = false;
+
+        scriptMap.charset = "utf-8";
+        scriptMap.type = "text/javascript";
+
+        scriptMap.src = "https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A381c0276c24327506617a3d06a7944d9766de668b9e583c969dfc344c7cf1f24&amp;width=100%25&amp;height=590&amp;lang=ru_RU&amp;scroll=false";
+
+        $("#trust-map").mouseenter(function() {
+
+            if (radio) return false;
+
+            document.getElementById("trust-map").appendChild(scriptMap);
+            // $("#trust-map").append(scriptMap);
+            radio = true;
+        });
+    })();
 
     $(".slider-nav img").click(function() {
 

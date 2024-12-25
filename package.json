@@ -42,5 +42,9 @@
     "require-dir": "^1.2.0",
     "vinyl-ftp": "^0.6.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "volta": {
+    "node": "14.21.3",
+    "npm": "7.24.2"
+  }
 }

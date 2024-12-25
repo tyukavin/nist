@@ -294,7 +294,11 @@
 
     form {
         margin: 0 auto;
-        width: 285px;
+        width: 300px;
+
+        .smart-captcha {
+            margin-bottom: 30px;
+        }
     }
 
     input {
