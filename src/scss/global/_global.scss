@@ -1321,6 +1321,25 @@ ul, ol {
 
     li {
         margin-bottom: 3px;
+
+        &.price {
+            font-weight: 500;
+            margin-top: 15px;
+        }
+
+        .price-old {
+            color: #858585;
+            display: inline-block;
+            margin-right: 8px;
+            font-size: 16px;
+            text-decoration: line-through;
+        }
+
+        .price-new {
+            color: $color-primary;
+            font-size: 22px;
+            font-weight: 700;
+        }
     }
 }
 
